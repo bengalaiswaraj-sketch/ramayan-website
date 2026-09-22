@@ -1,0 +1,591 @@
+/* ==========================================================================
+   responsive.css — Media Queries & Responsive Adjustments
+   Ramayana: Beyond What We Were Told
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Tablet (max-width: 1024px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .revelation-cards {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-4);
+  }
+
+  .evidence-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .footer-main {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  .footer-brand {
+    max-width: none;
+  }
+
+  .hero {
+    padding: var(--space-12) var(--space-6);
+  }
+
+  .section,
+  .section-intro,
+  .section-investigations,
+  .section-methodology,
+  .section-multiplicity,
+  .section-closing {
+    padding: var(--space-16) 0;
+  }
+
+  .article-hero {
+    padding: var(--space-16) 0 var(--space-12);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile (max-width: 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  /* Show hamburger, hide desktop nav */
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .main-nav:not(.nav--open) {
+    display: none;
+  }
+
+  /* Header */
+  .header-container {
+    padding: 0 var(--space-4);
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 80vh;
+    padding: var(--space-10) var(--space-4);
+  }
+
+  .hero-tagline {
+    margin-bottom: var(--space-2);
+  }
+
+  .hero-invitation {
+    margin-bottom: var(--space-6);
+  }
+
+  /* Container */
+  .container {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+
+  /* Card grids stack */
+  .revelation-cards,
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .revelation-card .card-content {
+    padding: var(--space-6);
+  }
+
+  .card-image {
+    height: 160px;
+  }
+
+  .card-number {
+    font-size: var(--text-4xl);
+  }
+
+  .evidence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .methodology-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tradition-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* What We Know — stack */
+  .what-we-know-box {
+    grid-template-columns: 1fr;
+  }
+
+  .what-we-know-column:first-child {
+    border-right: none;
+    border-bottom: 1px solid var(--border-default);
+  }
+
+  /* Text Comparison — stack */
+  .text-comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-divider {
+    width: auto;
+    height: 48px;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid var(--border-default);
+    border-bottom: 1px solid var(--border-default);
+    writing-mode: horizontal-tb;
+  }
+
+  .comparison-divider span {
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+  }
+
+  /* Timeline */
+  .timeline {
+    padding-left: var(--space-6);
+  }
+
+  .timeline-dot {
+    left: calc(-1 * var(--space-6) + 4px);
+    width: 10px;
+    height: 10px;
+  }
+
+  .timeline::before {
+    left: 9px;
+  }
+
+  /* Source modal — full width */
+  .source-modal-overlay {
+    padding: var(--space-3);
+    align-items: flex-end;
+  }
+
+  .source-modal {
+    max-width: none;
+    max-height: 85vh;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    padding: var(--space-6);
+  }
+
+  /* Footer */
+  .footer-links {
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  /* Article */
+  .article-hero {
+    padding: var(--space-12) 0 var(--space-8);
+  }
+
+  .article-hero-content {
+    padding: 0 var(--space-4);
+  }
+
+  .article-body {
+    padding: var(--space-8) var(--space-4);
+  }
+
+  .article-body h2 {
+    margin-top: var(--space-10);
+  }
+
+  .article-body h3 {
+    margin-top: var(--space-8);
+  }
+
+  .article-meta {
+    gap: var(--space-3);
+  }
+
+  /* Section divider */
+  .section-divider {
+    margin: var(--space-8) auto;
+  }
+
+  /* Sections */
+  .section,
+  .section-intro,
+  .section-investigations,
+  .section-methodology,
+  .section-multiplicity,
+  .section-closing {
+    padding: var(--space-12) 0;
+  }
+
+  .section-header {
+    margin-bottom: var(--space-8);
+  }
+
+  /* Sanskrit verse */
+  .sanskrit-text {
+    font-size: var(--text-lg);
+  }
+
+  /* Quote block */
+  .quote-block {
+    padding: var(--space-6) var(--space-4) var(--space-6) var(--space-8);
+  }
+
+  .quote-block::before {
+    font-size: 3.5rem;
+  }
+
+  /* Next revelation */
+  .nav-next-revelation {
+    padding: var(--space-4) var(--space-5);
+  }
+
+  /* Breadcrumbs */
+  .breadcrumbs {
+    font-size: var(--text-xs);
+  }
+
+  /* Share buttons */
+  .share-buttons {
+    gap: var(--space-1);
+  }
+
+  /* Credibility strip */
+  .credibility-strip {
+    gap: var(--space-1);
+    font-size: 0.625rem;
+  }
+
+  /* Table scroll */
+  .article-body .table-wrapper {
+    margin-left: calc(-1 * var(--space-4));
+    margin-right: calc(-1 * var(--space-4));
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Small Mobile (max-width: 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  :root {
+    --text-base: 0.9375rem;
+  }
+
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero-content {
+    padding: 0 var(--space-2);
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .revelation-card .card-content {
+    padding: var(--space-5);
+  }
+
+  .card-image {
+    height: 140px;
+  }
+
+  .card-number {
+    font-size: var(--text-3xl);
+    top: var(--space-3);
+    right: var(--space-4);
+  }
+
+  .evidence-card {
+    padding: var(--space-4);
+  }
+
+  .what-we-know-column {
+    padding: var(--space-4);
+  }
+
+  .comparison-side {
+    padding: var(--space-4);
+  }
+
+  .sanskrit-verse-body {
+    padding: var(--space-4);
+  }
+
+  .sanskrit-text {
+    font-size: var(--text-base);
+  }
+
+  .editorial-image-placeholder {
+    padding: var(--space-6);
+  }
+
+  .source-modal {
+    padding: var(--space-4);
+  }
+
+  .site-logo .logo-text {
+    font-size: var(--text-base);
+  }
+
+  .article-body blockquote {
+    padding: var(--space-4) var(--space-4) var(--space-4) var(--space-6);
+  }
+
+  .footnote-item {
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .glossary-tooltip {
+    max-width: 220px;
+    font-size: var(--text-xs);
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .section-number {
+    font-size: 4rem;
+  }
+
+  .article-body {
+    padding: var(--space-6) var(--space-4);
+    line-height: var(--leading-relaxed);
+  }
+
+  .article-body h1 {
+    font-size: var(--text-2xl);
+    margin-top: var(--space-10);
+  }
+
+  .article-body h2 {
+    font-size: var(--text-xl);
+    margin-top: var(--space-8);
+  }
+
+  .article-body h3 {
+    font-size: var(--text-lg);
+    margin-top: var(--space-6);
+  }
+
+  .quote-block p {
+    font-size: var(--text-base);
+  }
+
+  .article-body .drop-cap::first-letter {
+    font-size: 2.8em;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Reduced Motion
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .revelation-card:hover {
+    transform: none;
+  }
+
+  .nav-next-revelation:hover {
+    transform: none;
+  }
+
+  .card-cta:hover::after,
+  .nav-next-revelation:hover .nav-next-arrow::after {
+    transform: none;
+  }
+
+  .source-modal {
+    transform: none;
+  }
+
+  .source-modal-overlay.active .source-modal {
+    transform: none;
+  }
+
+  .reading-progress {
+    transition: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .fade-in {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Print Styles
+   -------------------------------------------------------------------------- */
+@media print {
+  :root {
+    --bg-deepest: #FFFFFF;
+    --bg-deep: #FFFFFF;
+    --bg-surface: #FAFAFA;
+    --bg-elevated: #FFFFFF;
+    --bg-hover: #F5F5F5;
+
+    --text-primary: #000000;
+    --text-secondary: #333333;
+    --text-tertiary: #666666;
+
+    --accent: #1D4ED8;
+    --gold: #1D4ED8;
+    --gold-dim: #1D4ED8;
+    --border-default: #CCCCCC;
+    --border-subtle: #EEEEEE;
+
+    --shadow-sm: none;
+    --shadow-md: none;
+    --shadow-lg: none;
+    --shadow-gold: none;
+  }
+
+  body {
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #000;
+    background: #fff;
+  }
+
+  .site-header,
+  .site-footer,
+  .reading-progress,
+  .skip-to-content,
+  .mobile-menu-toggle,
+  .mobile-nav,
+  .share-buttons,
+  .header-actions,
+  .nav-next-revelation,
+  .source-modal-overlay,
+  .search-modal,
+  .btn-primary,
+  .btn-secondary {
+    display: none !important;
+  }
+
+  .article-body {
+    max-width: none;
+    padding: 0;
+    font-size: 11pt;
+  }
+
+  .article-body a:not([class])::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  .article-hero {
+    padding: 0;
+    background: none;
+  }
+
+  .article-hero::before,
+  .article-hero::after {
+    display: none;
+  }
+
+  .revelation-card,
+  .evidence-card,
+  .sanskrit-verse-card,
+  .what-we-know-box,
+  .text-comparison,
+  blockquote,
+  .quote-block {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .hero::before,
+  .hero::after,
+  .hero-bottom-border,
+  .section-number {
+    display: none !important;
+  }
+
+  .revelation-card,
+  .evidence-card {
+    border: 1px solid #CCC;
+    box-shadow: none;
+  }
+
+  .revelation-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .card-label,
+  .section-overline {
+    color: #333;
+  }
+
+  .section-divider {
+    background: #CCC;
+  }
+
+  .section-divider::after {
+    background: #999;
+  }
+
+  .source-marker {
+    color: #333;
+    font-weight: bold;
+  }
+
+  .footnote-ref {
+    color: #333;
+  }
+
+  @page {
+    margin: 2cm;
+  }
+
+  @page :first {
+    margin-top: 4cm;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   High Contrast
+   -------------------------------------------------------------------------- */
+@media (prefers-contrast: high) {
+  :root {
+    --border-subtle: rgba(30, 41, 59, 0.15);
+    --border-default: rgba(30, 41, 59, 0.25);
+    --text-tertiary: #64748B;
+  }
+
+  .source-badge,
+  .confidence-badge {
+    border-width: 2px;
+  }
+}

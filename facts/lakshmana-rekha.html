@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakshmana Rekha: The Protective Line Absent from Valmiki's Ramayana | Ramayana: Beyond What We Were Told</title>
+    <meta name="description" content="The Lakshmana Rekha is one of the most famous episodes in Indian culture, yet it is completely absent from Valmiki's original Ramayana. Trace its origins to 15th-century regional traditions.">
+    <meta name="keywords" content="Lakshmana Rekha, Sita abduction, Valmiki Ramayana, Aranyakanda, protective line, Krittivasa, Tulsidas, Ravana disguise, critical edition, textual history">
+    <link rel="canonical" href="">
+    <meta property="og:title" content="Lakshmana Rekha: The Protective Line Absent from Valmiki's Ramayana">
+    <meta property="og:description" content="A boundary that was never drawn but can never be erased. Explore the textual evidence.">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lakshmana Rekha: The Protective Line Absent from Valmiki's Ramayana">
+    <meta name="twitter:description" content="The most famous line in Indian storytelling may not appear in the original text.">
+    <meta property="og:image" content="../images/og-image.png">
+    <meta name="twitter:image" content="../images/og-image.png">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/article.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <style>
+        /* Lakshmana Rekha Visual Element */
+        .lakshmana-rekha-visual {
+            position: relative;
+            padding: var(--space-16) 0;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .lakshmana-rekha-visual .rekha-text-above {
+            font-family: var(--font-heading);
+            font-size: var(--text-xl);
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: var(--space-6);
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeInUp 0.8s ease forwards 0.3s;
+        }
+
+        .lakshmana-rekha-visual .rekha-line {
+            display: block;
+            width: 0;
+            height: 2px;
+            margin: 0 auto;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                var(--gold-dim) 10%,
+                var(--gold) 30%,
+                var(--gold-light) 50%,
+                var(--gold) 70%,
+                var(--gold-dim) 90%,
+                transparent
+            );
+            box-shadow: 0 0 12px var(--gold-glow), 0 0 24px rgba(200, 155, 60, 0.10);
+            animation: drawLine 1.5s ease forwards 0.8s;
+        }
+
+        .lakshmana-rekha-visual .rekha-text-below {
+            font-family: var(--font-heading);
+            font-size: var(--text-lg);
+            color: var(--text-tertiary);
+            font-style: italic;
+            margin-top: var(--space-6);
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        .lakshmana-rekha-visual .rekha-text-below.visible {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes drawLine {
+            to {
+                width: min(500px, 70%);
+            }
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Regional verse styling */
+        .regional-verse-card {
+            border: 1px solid var(--border-default);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin: var(--space-6) 0;
+        }
+
+        .regional-verse-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            padding: var(--space-3) var(--space-6);
+            background: var(--bg-surface);
+            border-bottom: 1px solid var(--border-subtle);
+            font-size: var(--text-xs);
+            font-weight: var(--weight-semibold);
+            letter-spacing: var(--tracking-widest);
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        .regional-verse-body {
+            padding: var(--space-6);
+        }
+
+        .regional-verse-text {
+            font-family: var(--font-devanagari);
+            font-size: var(--text-lg);
+            color: var(--text-primary);
+            line-height: var(--leading-loose);
+            margin-bottom: var(--space-4);
+        }
+
+        .regional-verse-translation {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            line-height: var(--leading-relaxed);
+            padding-top: var(--space-4);
+            border-top: 1px solid var(--border-subtle);
+            font-style: italic;
+        }
+
+        /* Symbolic function cards */
+        .symbolic-functions {
+            display: grid;
+            gap: var(--space-4);
+            margin: var(--space-6) 0;
+        }
+
+        .symbolic-function-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-left: 3px solid var(--gold);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            padding: var(--space-6);
+        }
+
+        .symbolic-function-card h4 {
+            font-family: var(--font-heading);
+            font-size: var(--text-base);
+            font-weight: var(--weight-semibold);
+            color: var(--gold);
+            margin-bottom: var(--space-3);
+        }
+
+        .symbolic-function-card p {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            line-height: var(--leading-relaxed);
+        }
+
+        /* Moral implications callout */
+        .moral-callout {
+            background: rgba(158, 90, 82, 0.06);
+            border: 1px solid rgba(158, 90, 82, 0.20);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            margin: var(--space-8) 0;
+        }
+
+        .moral-callout h4 {
+            font-family: var(--font-heading);
+            font-size: var(--text-base);
+            font-weight: var(--weight-semibold);
+            color: var(--badge-debated);
+            margin-bottom: var(--space-3);
+        }
+
+        .moral-callout p {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            line-height: var(--leading-relaxed);
+        }
+
+        /* Cultural persistence list */
+        .persistence-list {
+            list-style: none;
+            padding: 0;
+            margin: var(--space-4) 0;
+        }
+
+        .persistence-list li {
+            position: relative;
+            padding-left: var(--space-6);
+            margin-bottom: var(--space-3);
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            line-height: var(--leading-relaxed);
+        }
+
+        .persistence-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .lakshmana-rekha-visual .rekha-text-above,
+            .lakshmana-rekha-visual .rekha-text-below.visible {
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
+            .lakshmana-rekha-visual .rekha-line {
+                animation: none;
+                width: min(500px, 70%);
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Lakshmana Rekha: The Protective Line Absent from Valmiki's Ramayana",
+        "description": "The Lakshmana Rekha is one of the most famous episodes in Indian culture, yet it is completely absent from Valmiki's original Ramayana. This investigation traces its origins to 15th-century regional traditions and examines how it altered the moral structure of Sita's abduction.",
+        "author": {
+            "@type": "Organization",
+            "name": "Ramayana: Beyond What We Were Told"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Ramayana: Beyond What We Were Told"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage"
+        },
+        "keywords": "Lakshmana Rekha, Sita, Valmiki, Ramayana, Aranyakanda, Krittivasa, Tulsidas, textual history, critical edition"
+    }
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    <div class="reading-progress-bar" aria-hidden="true"></div>
+
+    <header class="site-header" role="banner">
+        <div class="header-container">
+            <a href="../index.html" class="site-logo" aria-label="Home">
+                <span class="logo-text">Ramayana</span>
+            </a>
+            <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Discover</a></li>
+                    <li class="nav-dropdown">
+                        <a href="../index.html#investigations" aria-haspopup="true">Investigations</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="sita-exile.html">Sita's Exile</a></li>
+                            <li><a href="ravana-dahan.html">Ravana Dahan</a></li>
+                            <li><a href="lakshmana-rekha.html" class="active">Lakshmana Rekha</a></li>
+                            <li><a href="agni-pariksha.html">Agni Pariksha</a></li>
+                            <li><a href="shambuka.html">The Shambuka Episode</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../timeline.html">Timeline</a></li>
+                    <li><a href="../methodology.html">How We Know</a></li>
+                    <li><a href="../sources.html">Sources</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="search-toggle" aria-label="Open search" title="Search (Ctrl+K)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+                <button class="theme-toggle" aria-label="Toggle reading mode" title="Toggle reading mode">
+                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- ARTICLE HERO -->
+        <section class="article-hero" aria-label="Article introduction">
+            <div class="article-hero-content">
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="separator" aria-hidden="true">></span>
+                    <a href="../index.html#investigations">Investigations</a>
+                    <span class="separator" aria-hidden="true">></span>
+                    <span class="current">Lakshmana Rekha</span>
+                </nav>
+
+                <div class="article-meta">
+                    <span class="card-label">Investigation <span style="font-family: var(--font-devanagari);">&#x0966;&#x096A;</span></span>
+                    <span class="divider" aria-hidden="true"></span>
+                    <span class="reading-time">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <span>18 min read</span>
+                    </span>
+                    <span class="divider" aria-hidden="true"></span>
+                    <div class="share-buttons">
+                        <button class="share-btn" aria-label="Share on Twitter" title="Share on Twitter" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + '&url=' + encodeURIComponent(window.location.href), '_blank')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </button>
+                        <button class="share-btn" aria-label="Share on Facebook" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </button>
+                        <button class="share-btn" aria-label="Copy link" title="Copy link" onclick="navigator.clipboard.writeText(window.location.href)">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <h1>The Most Famous Line That May Not Be in Valmiki's Scene</h1>
+                <p class="lead">A boundary that was never drawn but can never be erased</p>
+            </div>
+        </section>
+
+        <!-- LAKSHMANA REKHA VISUAL ELEMENT -->
+        <div class="lakshmana-rekha-visual" aria-label="Decorative visual element">
+            <p class="rekha-text-above">You know this line.</p>
+            <span class="rekha-line" aria-hidden="true"></span>
+            <p class="rekha-text-below" id="rekhaTextBelow">But do you know where it first appears?</p>
+        </div>
+
+        <!-- ARTICLE BODY -->
+        <article class="article-body">
+
+            <!-- SECTION 1: THE STORY WE KNOW -->
+            <h2>The Story We Know</h2>
+
+            <p class="drop-cap">The Lakshmana Rekha -- a magical protective line drawn by Lakshmana around Sita's dwelling before departing to help Rama. When Sita crosses it to give alms to a disguised Ravana, she becomes vulnerable and is abducted. The episode is among the most universally recognized moments in Indian storytelling.</p>
+
+            <p>"Lakshmana Rekha" has become a proverb across South Asia for inviolable boundaries -- lines that should never be crossed. Politicians invoke it, parents cite it, and millions visualize it from Ramanand Sagar's iconic 1987 television depiction. It is, for many, the defining image of Sita's abduction.</p>
+
+            <div class="editorial-image-placeholder fade-in">
+                <p class="placeholder-label">Editorial Image</p>
+                <p class="placeholder-title">The Lakshmana Rekha in Popular Imagination</p>
+                <p class="placeholder-description">A depiction of the protective boundary drawn around Sita's dwelling -- one of the most recognizable images in Indian visual culture, yet absent from the oldest texts.</p>
+            </div>
+
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <!-- SECTION 2: THE QUESTION -->
+            <h2>The Question</h2>
+
+            <p>What if this iconic episode -- this image so deeply embedded in the cultural consciousness that it functions as a universal metaphor -- is <strong>completely absent</strong> from Valmiki's original Ramayana?</p>
+
+            <p>That is precisely what the textual evidence reveals. The Baroda Critical Edition of the Aranyakanda, reconstructed from hundreds of manuscripts, contains no mention of any protective line, circle, or magical boundary drawn by Lakshmana.</p>
+
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <!-- SECTION 3: WHAT THE TEXT SAYS -->
+            <h2>What the Text Says</h2>
+
+            <h3>Valmiki's Aranyakanda</h3>
+
+            <p>The critical edition reveals the sequence plainly. When Sita urges Lakshmana to go help Rama (who she believes is in danger due to Maricha's deceptive cry), Lakshmana simply leaves:</p>
+
+            <div class="sanskrit-verse-card fade-in">
+                <div class="sanskrit-verse-header">
+                    <span class="devanagari-label">श्लोक</span>
+                    <span>Aranyakanda, Critical Edition</span>
+                </div>
+                <div class="sanskrit-verse-body">
+                    <div class="sanskrit-text">
+                        स तया प्रेषितो वाक्यैः कैकेय्याः प्रियकारिभिः।<br>
+                        जगाम सहसा तत्र यत्र रामो महाबलः॥
+                    </div>
+                    <div class="verse-translation">
+                        "Sent by those words -- words pleasing to Kaikeyi's purpose -- he went hurriedly to where mighty Rama was."
+                    </div>
+                    <span class="verse-source-link" data-source="SRC001">Source: Bhatt Critical Edition <span aria-hidden="true">&rarr;</span></span>
+                </div>
+            </div>
+
+            <p>Lakshmana simply leaves. No line is drawn. No protection is established. No magical boundary is invoked. When Ravana approaches Sita in his disguise as a mendicant:</p>
+
+            <div class="sanskrit-verse-card fade-in">
+                <div class="sanskrit-verse-header">
+                    <span class="devanagari-label">श्लोक</span>
+                    <span>Aranyakanda, Critical Edition</span>
+                </div>
+                <div class="sanskrit-verse-body">
+                    <div class="sanskrit-text">
+                        सा तु सीता महाभागा विराजन्ती स्वतेजसा।<br>
+                        ददर्श राक्षसेन्द्रं तं वेषेण विचरन्तं तम्॥
+                    </div>
+                    <div class="verse-translation">
+                        "But that blessed Sita, radiant with her own splendor, saw that lord of rakshasas wandering in disguise."
+                    </div>
+                    <span class="verse-source-link" data-source="SRC003">Source: Pollock, Aranyakanda Translation <span aria-hidden="true">&rarr;</span></span>
+                </div>
+            </div>
+
+            <p>No barrier. No transgression. No supernatural protection failing. Sita sees a mendicant, and being devoted to the dharma of hospitality, she offers him welcome. Ravana seizes his opportunity through deception alone.</p>
+
+            <p><span class="confidence-badge confidence-badge--attested">Textually Attested</span></p>
+
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <!-- SECTION 4: THE EVIDENCE -->
+            <h2>The Evidence</h2>
+
+            <h3>Earliest Appearances</h3>
+
+            <p>If the Lakshmana Rekha does not appear in Valmiki, where did it come from? The textual trail leads to regional vernacular traditions centuries after the original composition.<span class="source-marker" data-source="SRC007" tabindex="0" role="button" aria-label="View source: Bulcke, Ramakatha">Source 1</span></p>
+
+            <p><span class="confidence-badge confidence-badge--tradition">Later Tradition</span></p>
+
+            <!-- 1. Krittivasi Ramayana -->
+            <h4>1. Krittivasi Ramayana (Bengali, 15th century CE)</h4>
+
+            <p>Krittivasa Ojha's Bengali retelling is among the earliest texts to contain a full narrative of the protective boundary. Here, the motif is developed with vivid detail -- Lakshmana draws a magical line around the hut before departing, warning Sita not to cross it under any circumstance.<span class="source-marker" data-source="SRC028" tabindex="0" role="button" aria-label="View source: Krittivasa Ojha">Source 2</span></p>
+
+            <div class="regional-verse-card fade-in">
+                <div class="regional-verse-header">
+                    <span>Bengali -- Krittivasi Ramayana (15th century CE)</span>
+                </div>
+                <div class="regional-verse-body">
+                    <div class="regional-verse-text">
+                        লক্ষ্মণ তখন সীতারে কহিল বচন।<br>
+                        রেখা দিয়া কুটিরেতে রাখিল তখন॥
+                    </div>
+                    <div class="regional-verse-translation">
+                        "Lakshmana then spoke these words to Sita. Drawing a line around the hut, he kept her protected."
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Dandi Ramayana -->
+            <h4>2. Dandi Ramayana (Odia, 16th century CE)</h4>
+
+            <p>Balarama Dasa's Odia retelling elaborates the motif further, describing a four-sided protective boundary around the dwelling. The line is invested with divine power, explicitly capable of burning any who cross with malicious intent.<span class="source-marker" data-source="SRC029" tabindex="0" role="button" aria-label="View source: Balarama Dasa">Source 3</span></p>
+
+            <div class="regional-verse-card fade-in">
+                <div class="regional-verse-header">
+                    <span>Odia -- Dandi Ramayana (16th century CE)</span>
+                </div>
+                <div class="regional-verse-body">
+                    <div class="regional-verse-text">
+                        ଚାରି ପାଖରେ ରେଖା ଦେଇ ଲକ୍ଷ୍ମଣ ଗଲା।<br>
+                        ସେ ରେଖା ଲଙ୍ଘିବା ଯେ ସେ ଦଗ୍ଧ ହେବ ସଂସାରେ॥
+                    </div>
+                    <div class="regional-verse-translation">
+                        "Lakshmana drew a line on four sides and departed. Whoever crosses that line shall be burned in this world."
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Tulsidas -->
+            <h4>3. Tulsidas's Ramcharitmanas (1574-76 CE)</h4>
+
+            <p>Significantly, Tulsidas's immensely influential Hindi retelling does <strong>not</strong> explicitly mention the Lakshmana Rekha. The relevant verse describes Lakshmana leaving but contains no reference to line-drawing:<span class="source-marker" data-source="SRC030" tabindex="0" role="button" aria-label="View source: Tulsidas, Ramcharitmanas">Source 4</span></p>
+
+            <div class="sanskrit-verse-card fade-in">
+                <div class="sanskrit-verse-header">
+                    <span class="devanagari-label">दोहा</span>
+                    <span>Ramcharitmanas, Aranyakanda</span>
+                </div>
+                <div class="sanskrit-verse-body">
+                    <div class="sanskrit-text">
+                        चले लखन प्रभु आयसु माथा।
+                    </div>
+                    <div class="verse-translation">
+                        "Lakshmana left, bearing the Lord's command upon his head."
+                    </div>
+                    <span class="verse-source-link" data-source="SRC017">Source: Lutgendorf, Life of a Text <span aria-hidden="true">&rarr;</span></span>
+                </div>
+            </div>
+
+            <p>The absence of the Rekha from Tulsidas is significant. If the motif had been universally established in the tradition by the late 16th century, one might expect the greatest Hindi reteller to include it. Its absence suggests the motif was still developing and had not yet achieved the canonical status it would later acquire.<span class="source-marker" data-source="SRC017" tabindex="0" role="button" aria-label="View source: Lutgendorf">Source 5</span></p>
+
+            <!-- 4. Kamban -->
+            <h4>4. Kamban's Tamil Iramavataram (12th century CE)</h4>
+
+            <p>The great Tamil poet Kamban makes no mention of any protective line. In his version, when Lakshmana must depart, he offers only verbal warnings and instructions to Sita. The abduction proceeds through Ravana's cunning alone, without any magical barrier to overcome.<span class="source-marker" data-source="SRC031" tabindex="0" role="button" aria-label="View source: Kamban, Iramavataram">Source 6</span></p>
+
+            <div class="regional-verse-card fade-in">
+                <div class="regional-verse-header">
+                    <span>Tamil -- Kamban's Iramavataram (12th century CE)</span>
+                </div>
+                <div class="regional-verse-body">
+                    <div class="regional-verse-text">
+                        இலக்குவன் மொழிந்தான் சீதைக்கு<br>
+                        காவல் சொல்லிப் போயினான்
+                    </div>
+                    <div class="regional-verse-translation">
+                        "Lakshmana spoke to Sita, giving words of warning and protection, and departed."
+                    </div>
+                </div>
+            </div>
+
+            <h3>Buddhist and Jain Silence</h3>
+
+            <p>The independent ancient narrative traditions of Buddhism and Jainism -- which preserve some of the oldest retellings of the Rama story -- contain no protective boundary motif whatsoever.</p>
+
+            <p><span class="confidence-badge confidence-badge--attested">Textually Attested</span></p>
+
+            <ul>
+                <li><strong>Dasaratha Jataka</strong> (3rd century BCE): The oldest independent Rama narrative. No protective measures of any kind are mentioned in connection with Sita's vulnerability.<span class="source-marker" data-source="SRC058" tabindex="0" role="button" aria-label="View source: Dasaratha Jataka">Source 7</span></li>
+                <li><strong>Paumacariya</strong> (4th century CE): Vimalasuri's Jain Ramayana, which systematically rationalizes the narrative, presents the scene with stark simplicity. Lakshmana goes. Sita is simply alone. Ravana arrives in disguise.<span class="source-marker" data-source="SRC034" tabindex="0" role="button" aria-label="View source: Vimalasuri, Paumacariya">Source 8</span></li>
+            </ul>
+
+            <div class="regional-verse-card fade-in">
+                <div class="regional-verse-header">
+                    <span>Prakrit -- Paumacariya (4th century CE)</span>
+                </div>
+                <div class="regional-verse-body">
+                    <div class="regional-verse-text">
+                        गओ लक्खणो सीया एगा अणाहरक्खिया।<br>
+                        रावणो छम्मवेसेण तत्थ आगओ॥
+                    </div>
+                    <div class="regional-verse-translation">
+                        "Lakshmana went. Sita was alone, unprotected. Ravana came there in a deceptive disguise."
+                    </div>
+                </div>
+            </div>
+
+            <p>The convergence is unmistakable. The earliest Sanskrit text, the Buddhist Jataka, the Jain Paumacariya, and even Kamban's medieval Tamil masterpiece all agree: there was no magical line. The motif enters the tradition only in the 15th century and later.</p>
+
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <!-- TEXT COMPARISON -->
+            <h2>Comparing the Narratives</h2>
+
+            <div class="text-comparison fade-in">
+                <div class="comparison-side comparison-side--popular">
+                    <h4>What We Often Hear</h4>
+                    <p>"Lakshmana drew a magical line around Sita. She crossed it to give alms to a mendicant, losing the protection. By stepping beyond the boundary, she became vulnerable to Ravana's abduction."</p>
+                </div>
+                <div class="comparison-divider">
+                    <span>VS</span>
+                </div>
+                <div class="comparison-side comparison-side--textual">
+                    <h4>What This Text Shows</h4>
+                    <p>"Valmiki presents Sita's vulnerability as direct and unmediated. There is no barrier, no transgression. Lakshmana departs, Sita encounters a disguised Ravana, and fate alone (<em>daiva</em>) is named as the cause."</p>
+                </div>
+            </div>
+
+            <div class="sanskrit-verse-card fade-in">
+                <div class="sanskrit-verse-header">
+                    <span class="devanagari-label">श्लोक</span>
+                    <span>On the Cause of Sita's Abduction</span>
+                </div>
+                <div class="sanskrit-verse-body">
+                    <div class="sanskrit-text">
+                        न सीता कारणं तत्र न रामो न च लक्ष्मणः।<br>
+                        दैवमेव परं तत्र कारणं नात्र संशयः॥
+                    </div>
+                    <div class="verse-translation">
+                        "Neither Sita nor Rama nor Lakshmana was the cause there. Fate alone was the supreme cause -- of this there is no doubt."
+                    </div>
+                    <span class="verse-source-link" data-source="SRC001">Source: Bhatt Critical Edition <span aria-hidden="true">&rarr;</span></span>
+                </div>
+            </div>
+
+            <p>This verse captures Valmiki's moral framework with crystalline clarity. The poet assigns no blame to any of the three protagonists. Cosmic destiny -- <em>daiva</em> -- alone bears responsibility for the events that unfold.</p>
+
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <!-- SECTION 5: WHY THE LINE WAS DRAWN -->
+            <h2>Why the Line Was Drawn (In Later Texts)</h2>
+
+            <p>If the Lakshmana Rekha serves no narrative purpose in Valmiki's original, why did later traditions feel compelled to create it? Scholars identify three interrelated symbolic functions.<span class="source-marker" data-source="SRC032" tabindex="0" role="button" aria-label="View source: Dev Sen">Source 9</span></p>
+
+            <p><span class="confidence-badge confidence-badge--interpretation">Scholarly Interpretation</span></p>
+
+            <div class="symbolic-functions">
+                <div class="symbolic-function-card fade-in">
+                    <h4>1. Explains Lakshmana's Departure</h4>
+                    <p>Lakshmana's decision to leave Sita alone in the forest presents a narrative problem: how could such a devoted protector simply walk away? The magical line resolves this tension by showing him fulfilling his protective duty even in absence. The Rekha becomes a <em>substitute guardian</em> -- proof that Lakshmana did not abandon his responsibility, but rather transferred it into a physical, supernatural form.</p>
+                </div>
+                <div class="symbolic-function-card fade-in">
+                    <h4>2. Redistributes Moral Responsibility</h4>
+                    <p>The introduction of the Rekha shifts partial moral responsibility onto Sita for crossing the boundary. In later medieval traditions, where attitudes about women's obedience and adherence to prescribed boundaries were being codified with increasing rigidity, the Rekha provided a framework for understanding Sita's abduction as partly resulting from her own transgression -- her failure to remain within the limits set for her protection. The Adbhuta Ramayana, a late Sanskrit text, explicitly engages with this redistribution of culpability.<span class="source-marker" data-source="SRC024" tabindex="0" role="button" aria-label="View source: Adhyatma Ramayana">Source 10</span></p>
+                </div>
+                <div class="symbolic-function-card fade-in">
+                    <h4>3. Creates Dharmic Irony</h4>
+                    <p>The Rekha introduces a poignant paradox: Sita crosses the protective boundary not out of disobedience but to fulfill <em>dana dharma</em> -- the sacred duty of giving alms to a mendicant. She follows one dharma (hospitality, charity) by violating another (remaining within the protective boundary). This tragic irony -- where obedience to one moral imperative necessitates breaking another -- became a powerful narrative device in later retellings, adding philosophical complexity to what Valmiki had presented as pure cosmic fate.</p>
+                </div>
+            </div>
+
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <!-- SECTION 6: MORAL IMPLICATIONS -->
+            <h2>The Moral Implications</h2>
+
+            <div class="moral-callout fade-in">
+                <h4>A Fundamental Shift in the Story's Moral Structure</h4>
+                <p>This is not merely a narrative detail. It is a transformation of the episode's entire ethical framework.</p>
+            </div>
+
+            <p>In Valmiki's original telling, Sita bears <strong>no responsibility whatsoever</strong> for her abduction. She is purely victimized by Ravana's evil and by cosmic destiny. The poet is unambiguous: "Neither Sita nor Rama nor Lakshmana was the cause." Sita's character is one of radiant virtue meeting overwhelming malevolent force.</p>
+
+            <p>The later addition of the Lakshmana Rekha fundamentally altered this moral calculus. By introducing a boundary that Sita <em>chose</em> to cross, the tradition introduced female agency and thus female culpability where the original saw none. The question shifted from "How could fate be so cruel?" to "Why did she cross the line?"</p>
+
+            <p>This shift reflects broader changes in the social attitudes of the periods when the motif was being developed. The medieval traditions that created and elaborated the Rekha were also traditions in which women's prescribed boundaries -- physical, social, and moral -- were being defined with increasing specificity.<span class="source-marker" data-source="SRC033" tabindex="0" role="button" aria-label="View source: Dev Sen, When Women Retell">Source 11</span></p>
+
+            <p>The textual evidence invites a reassessment: the most famous "lesson" that many draw from this episode -- that Sita's suffering resulted from crossing a forbidden boundary -- is not the lesson Valmiki intended to teach. It is a lesson that later centuries imposed on his narrative.</p>
+
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <!-- SECTION 7: CHRONOLOGY -->
+            <h2>Chronology: When the Line Appeared</h2>
+
+            <div class="timeline fade-in">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Pre-5th century CE</div>
+                        <h4>Complete Absence</h4>
+                        <p>No mention in Valmiki's Ramayana, the Dasaratha Jataka, or the Mahabharata's Ramopakhyana. The earliest strata of the Rama narrative tradition contain no protective boundary.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">4th century CE</div>
+                        <h4>Jain Silence</h4>
+                        <p>Vimalasuri's Paumacariya, an independent Jain retelling, describes the abduction with no protective measures of any kind. Lakshmana goes; Sita is alone; Ravana arrives.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">5th-10th century CE</div>
+                        <h4>Continued Absence</h4>
+                        <p>No mention in major Puranas, Kalidasa's works, or other classical Sanskrit literature. The motif appears nowhere in the literary record of this period.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">11th-14th century CE</div>
+                        <h4>Possible Oral Emergence</h4>
+                        <p>The motif may have begun circulating in oral traditions during this period, but it is conspicuously absent from Kamban's Tamil Iramavataram (12th century), the era's greatest literary retelling.<span class="source-marker" data-source="SRC031" tabindex="0" role="button" aria-label="View source: Kamban">Source 12</span></p>
+                    </div>
+                </div>
+                <div class="timeline-item active">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">15th century CE</div>
+                        <h4>First Clear Textual Appearances</h4>
+                        <p>The Krittivasi Ramayana in Bengali provides the earliest unambiguous written account. Regional vernacular traditions begin incorporating the motif as a standard narrative element.<span class="source-marker" data-source="SRC028" tabindex="0" role="button" aria-label="View source: Krittivasa Ojha">Source 13</span></p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">16th century CE</div>
+                        <h4>Widespread in Vernacular Traditions</h4>
+                        <p>The Dandi Ramayana in Odia elaborates the motif. Yet Tulsidas's Ramcharitmanas -- the era's most influential retelling -- remains ambiguous, suggesting the motif had not yet achieved universal canonical status.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">17th century onwards</div>
+                        <h4>Full Integration</h4>
+                        <p>The Lakshmana Rekha becomes fully integrated into popular consciousness, appearing in folk traditions, performance arts, and devotional narratives across South Asia.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Colonial period</div>
+                        <h4>Gender Reinterpretation</h4>
+                        <p>The motif is reinterpreted through evolving gender frameworks, taking on new moral and symbolic dimensions in colonial-era discourse about women's conduct and boundaries.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Modern era</div>
+                        <h4>Visual Iconography</h4>
+                        <p>Film and television -- particularly Ramanand Sagar's landmark 1987-88 television serial -- make the Lakshmana Rekha visually iconic. For many viewers, the televised image becomes the definitive version of the episode, eclipsing all textual traditions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <!-- SECTION 8: MODERN CULTURAL PERSISTENCE -->
+            <h2>Modern Cultural Persistence</h2>
+
+            <p>Today, the phrase "Lakshmana Rekha" functions as one of South Asia's most potent metaphors. It operates far beyond its narrative origins, serving as shorthand for:<span class="source-marker" data-source="SRC053" tabindex="0" role="button" aria-label="View source: Ramanujan">Source 14</span></p>
+
+            <ul class="persistence-list">
+                <li><strong>Moral boundaries that should not be crossed</strong> -- invoked in ethical discourse to mark the limits of acceptable conduct</li>
+                <li><strong>Limits of acceptable behavior</strong> -- used in personal, social, and institutional contexts to define boundaries of propriety</li>
+                <li><strong>Protective restrictions</strong> -- often carrying negative connotations of confinement, particularly when applied to women's freedoms</li>
+                <li><strong>Political and cultural rhetoric</strong> -- politicians and commentators invoke the phrase regularly, typically without awareness of its non-Valmikian origins</li>
+            </ul>
+
+            <p>The irony is striking. A metaphor drawn from an episode that <em>does not appear in the original text</em> has become one of the most culturally powerful images in the entire Ramayana tradition. The line that was never drawn in the ancient poem is now impossible to erase from the cultural imagination.</p>
+
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <!-- WHAT WE KNOW / WHAT WE DON'T -->
+            <div class="what-we-know-box fade-in">
+                <div class="what-we-know-column">
+                    <h4>What the Evidence Supports</h4>
+                    <ul>
+                        <li>The Lakshmana Rekha motif is absent from Valmiki's Aranyakanda in the Baroda Critical Edition</li>
+                        <li>Its earliest clear textual appearances are in 15th-century vernacular traditions, beginning with Krittivasa Ojha's Bengali Ramayana</li>
+                        <li>Buddhist and Jain versions independently confirm its absence from ancient narrative traditions</li>
+                        <li>Even Tulsidas (16th century) does not explicitly include the motif, suggesting it was still consolidating</li>
+                    </ul>
+                </div>
+                <div class="what-we-know-column">
+                    <h4>What Remains Debated</h4>
+                    <ul>
+                        <li>The precise pathway through which the motif entered and spread among regional traditions remains uncertain</li>
+                        <li>Whether oral traditions carried the motif before the earliest written evidence -- and if so, how far back -- is unknown</li>
+                        <li>The relationship between the Rekha motif and evolving medieval attitudes toward women's boundaries requires further study</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <!-- SECTION 9: SOURCES -->
+            <h2>Sources and Further Reading</h2>
+
+            <div class="evidence-section">
+                <div class="evidence-section-title">Primary Texts and Critical Editions</div>
+                <div class="evidence-grid">
+                    <div class="evidence-card fade-in">
+                        <div class="evidence-card-type">Critical Edition</div>
+                        <h4>Bhatt Critical Edition</h4>
+                        <p>G.H. Bhatt et al., <em>The Valmiki Ramayana: Critical Edition</em> (1960-1975). Oriental Institute, Baroda. The foundational text for this investigation.<span class="source-marker" data-source="SRC001" tabindex="0" role="button" aria-label="View source">SRC001</span></p>
+                    </div>
+                    <div class="evidence-card fade-in">
+                        <div class="evidence-card-type">Translation</div>
+                        <h4>Goldman Aranyakanda Translation</h4>
+                        <p>Sheldon Pollock (trans.), <em>The Ramayana of Valmiki, Vol. III -- Aranyakanda</em> (1991). Princeton University Press.<span class="source-marker" data-source="SRC003" tabindex="0" role="button" aria-label="View source">SRC003</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="evidence-section">
+                <div class="evidence-section-title">Regional Ramayanas</div>
+                <div class="evidence-grid">
+                    <div class="evidence-card fade-in">
+                        <div class="evidence-card-type">Bengali</div>
+                        <h4>Krittivasa Ojha</h4>
+                        <p><em>Krittivasi Ramayana</em> (c. 15th century). Contains one of the earliest full Lakshmana Rekha narratives.<span class="source-marker" data-source="SRC028" tabindex="0" role="button" aria-label="View source">SRC028</span></p>
+                    </div>
+                    <div class="evidence-card fade-in">
+                        <div class="evidence-card-type">Odia</div>
+                        <h4>Balarama Dasa</h4>
+                        <p><em>Dandi Ramayana</em> (c. 16th century). Elaborates the four-sided protective boundary.<span class="source-marker" data-source="SRC029" tabindex="0" role="button" aria-label="View source">SRC029</span></p>
+                    </div>
+                    <div class="evidence-card fade-in">
+                        <div class="evidence-card-type">Hindi</div>
+                        <h4>Tulsidas</h4>
+                        <p><em>Ramcharitmanas</em> (1574-76). Notably does not explicitly include the Lakshmana Rekha.<span class="source-marker" data-source="SRC030" tabindex="0" role="button" aria-label="View source">SRC030</span></p>
+                    </div>
+                    <div class="evidence-card fade-in">
+                        <div class="evidence-card-type">Tamil</div>
+                        <h4>Kamban</h4>
+                        <p><em>Iramavataram</em> (c. 12th century). No protective line; only verbal warnings from Lakshmana.<span class="source-marker" data-source="SRC031" tabindex="0" role="button" aria-label="View source">SRC031</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="evidence-section">
+                <div class="evidence-section-title">Scholarly Studies</div>
+                <div class="evidence-grid">
+                    <div class="evidence-card fade-in">
+                        <div class="evidence-card-type">Feminist Analysis</div>
+                        <h4>Nabaneeta Dev Sen</h4>
+                        <p>"Rewriting the Ramayana: Chandrabati and the Politics of Gender" (2001) and "When Women Retell the Ramayana" (1998).<span class="source-marker" data-source="SRC032" tabindex="0" role="button" aria-label="View source">SRC032</span><span class="source-marker" data-source="SRC033" tabindex="0" role="button" aria-label="View source">SRC033</span></p>
+                    </div>
+                    <div class="evidence-card fade-in">
+                        <div class="evidence-card-type">Comparative</div>
+                        <h4>Philip Lutgendorf</h4>
+                        <p><em>The Life of a Text: Performing the Ramcharitmanas of Tulsidas</em> (1991). On Tulsidas and the development of North Indian Rama traditions.<span class="source-marker" data-source="SRC017" tabindex="0" role="button" aria-label="View source">SRC017</span></p>
+                    </div>
+                    <div class="evidence-card fade-in">
+                        <div class="evidence-card-type">Origin Study</div>
+                        <h4>Camille Bulcke</h4>
+                        <p><em>Ramakatha: Utpatti aur Vikas</em> (1950). Pioneering study tracing the evolution of the Rama story across traditions.<span class="source-marker" data-source="SRC007" tabindex="0" role="button" aria-label="View source">SRC007</span></p>
+                    </div>
+                    <div class="evidence-card fade-in">
+                        <div class="evidence-card-type">Multiplicity</div>
+                        <h4>Pratibha Basu &amp; A.K. Ramanujan</h4>
+                        <p>On the diversity of Ramayana traditions and the concept of "Three Hundred Ramayanas."<span class="source-marker" data-source="SRC053" tabindex="0" role="button" aria-label="View source">SRC053</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="evidence-section">
+                <div class="evidence-section-title">Non-Hindu Traditions</div>
+                <div class="evidence-grid">
+                    <div class="evidence-card fade-in">
+                        <div class="evidence-card-type">Buddhist</div>
+                        <h4>Dasaratha Jataka</h4>
+                        <p>Jataka No. 461 (c. 3rd century BCE). The oldest independent Rama narrative; no protective measures mentioned.<span class="source-marker" data-source="SRC058" tabindex="0" role="button" aria-label="View source">SRC058</span></p>
+                    </div>
+                    <div class="evidence-card fade-in">
+                        <div class="evidence-card-type">Jain</div>
+                        <h4>Vimalasuri</h4>
+                        <p><em>Paumacariya</em> (c. 4th century CE). Jain Ramayana confirming absence of protective boundary motif.<span class="source-marker" data-source="SRC034" tabindex="0" role="button" aria-label="View source">SRC034</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <!-- NEXT INVESTIGATION -->
+            <a href="agni-pariksha.html" class="nav-next-revelation">
+                <div class="nav-next-label">Next Investigation</div>
+                <div class="nav-next-title">Was Agni Pariksha a Test -- or a Public Vindication?</div>
+                <p class="nav-next-excerpt">In Valmiki's text, Sita commands her own ordeal with fierce autonomy. Rama reveals he always knew her purity. The episode functions as cosmic vindication before divine witnesses -- not a husband's test of his wife.</p>
+                <span class="nav-next-arrow">Examine the Evidence</span>
+            </a>
+
+        </article>
+    </main>
+
+    <!-- SEARCH MODAL -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-label="Search" aria-hidden="true">
+        <div class="search-modal-overlay"></div>
+        <div class="search-modal-content">
+            <div class="search-input-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="search" id="searchInput" placeholder="Search investigations, sources, terms..." aria-label="Search the site" autocomplete="off">
+                <kbd>ESC</kbd>
+            </div>
+            <div class="search-results" id="searchResults" aria-live="polite"></div>
+        </div>
+    </div>
+
+    <!-- Source modal is created dynamically by sources.js -->
+
+    <!-- FOOTER -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <h2 class="footer-title">Ramayana: Beyond What We Were Told</h2>
+                    <p class="footer-subtitle">An exploration of textual history, tradition, and interpretation.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Investigations</h3>
+                        <ul>
+                            <li><a href="sita-exile.html">Sita's Exile</a></li>
+                            <li><a href="ravana-dahan.html">Ravana Dahan</a></li>
+                            <li><a href="lakshmana-rekha.html">Lakshmana Rekha</a></li>
+                            <li><a href="agni-pariksha.html">Agni Pariksha</a></li>
+                            <li><a href="shambuka.html">Shambuka Episode</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Explore</h3>
+                        <ul>
+                            <li><a href="../timeline.html">Timeline</a></li>
+                            <li><a href="../methodology.html">Methodology</a></li>
+                            <li><a href="../sources.html">Sources</a></li>
+                            <li><a href="../glossary.html">Glossary</a></li>
+                            <li><a href="../about.html">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-wisdom">
+                <p class="footer-quote">Truth deserves inquiry.<br>Tradition deserves understanding.</p>
+            </div>
+            <div class="footer-visitor" id="visitorCounter" aria-label="Visit counter"></div>
+            <div class="footer-bottom">
+                <p class="footer-disclaimer">This website presents textual and historical arguments based on the cited sources and supplied manuscript. Ramayana traditions are diverse, and some questions of chronology, authorship, and interpretation remain subjects of scholarly debate.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/config.js"></script>
+    <script src="../data/sources.js"></script>
+    <script src="../data/search-index.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/sources.js"></script>
+    <script src="../js/visitor-counter.js"></script>
+    <script src="../js/reading-progress.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        // Lakshmana Rekha visual: reveal lower text on scroll
+        (function() {
+            var rekhaBelow = document.getElementById('rekhaTextBelow');
+            if (!rekhaBelow) return;
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        rekhaBelow.classList.add('visible');
+                        observer.unobserve(rekhaBelow);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(rekhaBelow);
+        })();
+    </script>
+</body>
+</html>
