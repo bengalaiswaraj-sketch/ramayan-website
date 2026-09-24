@@ -197,12 +197,12 @@
         <section class="article-hero article-hero--with-image" style="background-image: url('images/sources-hero.png')" aria-label="Page introduction">
             <div class="article-hero-content">
                 <nav class="breadcrumbs" aria-label="Breadcrumb">
-                    <a href="index.html">Home</a>
+                    <a href="index.html" data-i18n="breadcrumb-home">Home</a>
                     <span class="separator" aria-hidden="true">/</span>
-                    <span class="current">Sources</span>
+                    <span class="current" data-i18n="sources-breadcrumb">Sources</span>
                 </nav>
-                <h1>Source Library</h1>
-                <p class="lead">Every claim in this project is grounded in cited scholarly sources. Explore the complete bibliography below, filtered by investigation or source type.</p>
+                <h1 data-i18n="sources-title">Source Library</h1>
+                <p class="lead" data-i18n="sources-lead">Every claim in this project is grounded in cited scholarly sources. Explore the complete bibliography below, filtered by investigation or source type.</p>
             </div>
         </section>
 
@@ -211,13 +211,13 @@
 
             <!-- FILTERS -->
             <div class="source-filters" role="group" aria-label="Filter sources by investigation">
-                <button class="source-filter-btn active" data-filter="all">All</button>
-                <button class="source-filter-btn" data-filter="critical-editions">Critical Editions</button>
-                <button class="source-filter-btn" data-filter="sita-exile">Sita's Exile</button>
-                <button class="source-filter-btn" data-filter="ravana-dahan">Dussehra</button>
-                <button class="source-filter-btn" data-filter="lakshmana-rekha">Lakshmana Rekha</button>
-                <button class="source-filter-btn" data-filter="agni-pariksha">Agni Pariksha</button>
-                <button class="source-filter-btn" data-filter="shambuka">Shambuka</button>
+                <button class="source-filter-btn active" data-filter="all" data-i18n="sources-filter-all">All</button>
+                <button class="source-filter-btn" data-filter="critical-editions" data-i18n="sources-filter-critical">Critical Editions</button>
+                <button class="source-filter-btn" data-filter="sita-exile" data-i18n="sources-filter-sita">Sita's Exile</button>
+                <button class="source-filter-btn" data-filter="ravana-dahan" data-i18n="sources-filter-dussehra">Dussehra</button>
+                <button class="source-filter-btn" data-filter="lakshmana-rekha" data-i18n="sources-filter-lakshmana">Lakshmana Rekha</button>
+                <button class="source-filter-btn" data-filter="agni-pariksha" data-i18n="sources-filter-agni">Agni Pariksha</button>
+                <button class="source-filter-btn" data-filter="shambuka" data-i18n="sources-filter-shambuka">Shambuka</button>
             </div>
 
             <!-- SOURCE CARDS CONTAINER (also populated by JS from data/sources.js) -->
@@ -225,332 +225,332 @@
 
                 <!-- CATEGORY: PRIMARY / CRITICAL TEXTS -->
                 <div class="source-category">
-                    <h2 class="source-category-title">Primary / Critical Texts</h2>
+                    <h2 class="source-category-title" data-i18n="sources-cat-primary">Primary / Critical Texts</h2>
 
                     <div class="source-card" data-investigations="sita-exile ravana-dahan lakshmana-rekha agni-pariksha shambuka" data-type="critical-editions">
                         <div class="source-card-header">
                             <div>
-                                <div class="source-card-author">Bhatt, G.H. et al.</div>
-                                <div class="source-card-title">The Valmiki Ramayana: Critical Edition</div>
+                                <div class="source-card-author" data-i18n="sources-c1-author">Bhatt, G.H. et al.</div>
+                                <div class="source-card-title" data-i18n="sources-c1-title">The Valmiki Ramayana: Critical Edition</div>
                             </div>
-                            <span class="source-badge source-badge--critical">Critical Edition</span>
+                            <span class="source-badge source-badge--critical" data-i18n="sources-badge-critical-edition">Critical Edition</span>
                         </div>
-                        <div class="source-card-meta">1960&ndash;1975 &middot; Oriental Institute, Baroda &middot; 7 volumes</div>
-                        <div class="source-card-desc">The foundational critical edition based on analysis of hundreds of manuscripts across India, establishing the oldest recoverable text through rigorous stemmatic comparison.</div>
+                        <div class="source-card-meta" data-i18n="sources-c1-meta">1960&ndash;1975 &middot; Oriental Institute, Baroda &middot; 7 volumes</div>
+                        <div class="source-card-desc" data-i18n="sources-c1-desc">The foundational critical edition based on analysis of hundreds of manuscripts across India, establishing the oldest recoverable text through rigorous stemmatic comparison.</div>
                         <div class="source-card-tags">
-                            <span class="source-tag">Sita's Exile</span>
-                            <span class="source-tag">Dussehra</span>
-                            <span class="source-tag">Lakshmana Rekha</span>
-                            <span class="source-tag">Agni Pariksha</span>
-                            <span class="source-tag">Shambuka</span>
+                            <span class="source-tag" data-i18n="sources-tag-sita-exile">Sita's Exile</span>
+                            <span class="source-tag" data-i18n="sources-tag-dussehra">Dussehra</span>
+                            <span class="source-tag" data-i18n="sources-tag-lakshmana-rekha">Lakshmana Rekha</span>
+                            <span class="source-tag" data-i18n="sources-tag-agni-pariksha">Agni Pariksha</span>
+                            <span class="source-tag" data-i18n="sources-tag-shambuka">Shambuka</span>
                         </div>
                     </div>
 
                     <div class="source-card" data-investigations="sita-exile shambuka" data-type="critical-editions">
                         <div class="source-card-header">
                             <div>
-                                <div class="source-card-author">Pollock, Sheldon (trans.)</div>
-                                <div class="source-card-title">The Ramayana of Valmiki: An Epic of Ancient India, Vol. II &mdash; Ayodhyakanda</div>
+                                <div class="source-card-author" data-i18n="sources-c2-author">Pollock, Sheldon (trans.)</div>
+                                <div class="source-card-title" data-i18n="sources-c2-title">The Ramayana of Valmiki: An Epic of Ancient India, Vol. II &mdash; Ayodhyakanda</div>
                             </div>
-                            <span class="source-badge source-badge--critical">Critical Edition</span>
+                            <span class="source-badge source-badge--critical" data-i18n="sources-badge-critical-edition">Critical Edition</span>
                         </div>
-                        <div class="source-card-meta">1986 &middot; Princeton University Press</div>
-                        <div class="source-card-desc">Annotated English translation of the Ayodhyakanda with extensive scholarly introduction on Rama's ideal kingship and the concept of dharma.</div>
+                        <div class="source-card-meta" data-i18n="sources-c2-meta">1986 &middot; Princeton University Press</div>
+                        <div class="source-card-desc" data-i18n="sources-c2-desc">Annotated English translation of the Ayodhyakanda with extensive scholarly introduction on Rama's ideal kingship and the concept of dharma.</div>
                         <div class="source-card-tags">
-                            <span class="source-tag">Sita's Exile</span>
-                            <span class="source-tag">Shambuka</span>
+                            <span class="source-tag" data-i18n="sources-tag-sita-exile">Sita's Exile</span>
+                            <span class="source-tag" data-i18n="sources-tag-shambuka">Shambuka</span>
                         </div>
                     </div>
 
                     <div class="source-card" data-investigations="lakshmana-rekha agni-pariksha" data-type="critical-editions">
                         <div class="source-card-header">
                             <div>
-                                <div class="source-card-author">Pollock, Sheldon (trans.)</div>
-                                <div class="source-card-title">The Ramayana of Valmiki: An Epic of Ancient India, Vol. III &mdash; Aranyakanda</div>
+                                <div class="source-card-author" data-i18n="sources-c3-author">Pollock, Sheldon (trans.)</div>
+                                <div class="source-card-title" data-i18n="sources-c3-title">The Ramayana of Valmiki: An Epic of Ancient India, Vol. III &mdash; Aranyakanda</div>
                             </div>
-                            <span class="source-badge source-badge--critical">Critical Edition</span>
+                            <span class="source-badge source-badge--critical" data-i18n="sources-badge-critical-edition">Critical Edition</span>
                         </div>
-                        <div class="source-card-meta">1991 &middot; Princeton University Press</div>
-                        <div class="source-card-desc">Translation of the Forest Book with critical apparatus examining the forest exile narrative and Sita's abduction.</div>
+                        <div class="source-card-meta" data-i18n="sources-c3-meta">1991 &middot; Princeton University Press</div>
+                        <div class="source-card-desc" data-i18n="sources-c3-desc">Translation of the Forest Book with critical apparatus examining the forest exile narrative and Sita's abduction.</div>
                         <div class="source-card-tags">
-                            <span class="source-tag">Lakshmana Rekha</span>
-                            <span class="source-tag">Agni Pariksha</span>
+                            <span class="source-tag" data-i18n="sources-tag-lakshmana-rekha">Lakshmana Rekha</span>
+                            <span class="source-tag" data-i18n="sources-tag-agni-pariksha">Agni Pariksha</span>
                         </div>
                     </div>
 
                     <div class="source-card" data-investigations="shambuka" data-type="critical-editions">
                         <div class="source-card-header">
                             <div>
-                                <div class="source-card-author">Goldman, Robert P. (trans.)</div>
-                                <div class="source-card-title">The Ramayana of Valmiki: An Epic of Ancient India, Vol. I &mdash; Balakanda</div>
+                                <div class="source-card-author" data-i18n="sources-c4-author">Goldman, Robert P. (trans.)</div>
+                                <div class="source-card-title" data-i18n="sources-c4-title">The Ramayana of Valmiki: An Epic of Ancient India, Vol. I &mdash; Balakanda</div>
                             </div>
-                            <span class="source-badge source-badge--critical">Critical Edition</span>
+                            <span class="source-badge source-badge--critical" data-i18n="sources-badge-critical-edition">Critical Edition</span>
                         </div>
-                        <div class="source-card-meta">1984 &middot; Princeton University Press</div>
-                        <div class="source-card-desc">Translation of the Balakanda with a landmark general introduction to the entire epic, its history, and reception.</div>
+                        <div class="source-card-meta" data-i18n="sources-c4-meta">1984 &middot; Princeton University Press</div>
+                        <div class="source-card-desc" data-i18n="sources-c4-desc">Translation of the Balakanda with a landmark general introduction to the entire epic, its history, and reception.</div>
                         <div class="source-card-tags">
-                            <span class="source-tag">Shambuka</span>
+                            <span class="source-tag" data-i18n="sources-tag-shambuka">Shambuka</span>
                         </div>
                     </div>
 
                     <div class="source-card" data-investigations="agni-pariksha ravana-dahan sita-exile" data-type="critical-editions">
                         <div class="source-card-header">
                             <div>
-                                <div class="source-card-author">Goldman, Robert P. &amp; Goldman, Sally J. Sutherland (trans.)</div>
-                                <div class="source-card-title">The Ramayana of Valmiki: An Epic of Ancient India, Vol. VI &mdash; Yuddhakanda</div>
+                                <div class="source-card-author" data-i18n="sources-c5-author">Goldman, Robert P. &amp; Goldman, Sally J. Sutherland (trans.)</div>
+                                <div class="source-card-title" data-i18n="sources-c5-title">The Ramayana of Valmiki: An Epic of Ancient India, Vol. VI &mdash; Yuddhakanda</div>
                             </div>
-                            <span class="source-badge source-badge--critical">Critical Edition</span>
+                            <span class="source-badge source-badge--critical" data-i18n="sources-badge-critical-edition">Critical Edition</span>
                         </div>
-                        <div class="source-card-meta">2009 &middot; Princeton University Press</div>
-                        <div class="source-card-desc">Translation of the War Book including the critical fire ordeal passage (agni pariksha) with detailed text-critical notes.</div>
+                        <div class="source-card-meta" data-i18n="sources-c5-meta">2009 &middot; Princeton University Press</div>
+                        <div class="source-card-desc" data-i18n="sources-c5-desc">Translation of the War Book including the critical fire ordeal passage (agni pariksha) with detailed text-critical notes.</div>
                         <div class="source-card-tags">
-                            <span class="source-tag">Agni Pariksha</span>
-                            <span class="source-tag">Dussehra</span>
-                            <span class="source-tag">Sita's Exile</span>
+                            <span class="source-tag" data-i18n="sources-tag-agni-pariksha">Agni Pariksha</span>
+                            <span class="source-tag" data-i18n="sources-tag-dussehra">Dussehra</span>
+                            <span class="source-tag" data-i18n="sources-tag-sita-exile">Sita's Exile</span>
                         </div>
                     </div>
 
                     <div class="source-card" data-investigations="sita-exile shambuka agni-pariksha" data-type="critical-editions">
                         <div class="source-card-header">
                             <div>
-                                <div class="source-card-author">Goldman, Sally J. Sutherland &amp; Goldman, Robert P.</div>
-                                <div class="source-card-title">The Ramayana of Valmiki: An Epic of Ancient India, Vol. VII &mdash; Uttarakanda</div>
+                                <div class="source-card-author" data-i18n="sources-c6-author">Goldman, Sally J. Sutherland &amp; Goldman, Robert P.</div>
+                                <div class="source-card-title" data-i18n="sources-c6-title">The Ramayana of Valmiki: An Epic of Ancient India, Vol. VII &mdash; Uttarakanda</div>
                             </div>
-                            <span class="source-badge source-badge--critical">Critical Edition</span>
+                            <span class="source-badge source-badge--critical" data-i18n="sources-badge-critical-edition">Critical Edition</span>
                         </div>
-                        <div class="source-card-meta">2017 &middot; Princeton University Press</div>
-                        <div class="source-card-desc">Translation and analysis of the controversial final book, with extensive discussion of its likely later composition and relationship to the core text.</div>
+                        <div class="source-card-meta" data-i18n="sources-c6-meta">2017 &middot; Princeton University Press</div>
+                        <div class="source-card-desc" data-i18n="sources-c6-desc">Translation and analysis of the controversial final book, with extensive discussion of its likely later composition and relationship to the core text.</div>
                         <div class="source-card-tags">
-                            <span class="source-tag">Sita's Exile</span>
-                            <span class="source-tag">Shambuka</span>
-                            <span class="source-tag">Agni Pariksha</span>
+                            <span class="source-tag" data-i18n="sources-tag-sita-exile">Sita's Exile</span>
+                            <span class="source-tag" data-i18n="sources-tag-shambuka">Shambuka</span>
+                            <span class="source-tag" data-i18n="sources-tag-agni-pariksha">Agni Pariksha</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- CATEGORY: ACADEMIC SCHOLARSHIP -->
                 <div class="source-category">
-                    <h2 class="source-category-title">Academic Scholarship</h2>
+                    <h2 class="source-category-title" data-i18n="sources-cat-academic">Academic Scholarship</h2>
 
                     <div class="source-card" data-investigations="sita-exile lakshmana-rekha ravana-dahan agni-pariksha">
                         <div class="source-card-header">
                             <div>
-                                <div class="source-card-author">Bulcke, Camille</div>
-                                <div class="source-card-title">Ramakatha: Utpatti aur Vikas</div>
+                                <div class="source-card-author" data-i18n="sources-c7-author">Bulcke, Camille</div>
+                                <div class="source-card-title" data-i18n="sources-c7-title">Ramakatha: Utpatti aur Vikas</div>
                             </div>
-                            <span class="source-badge source-badge--academic">Academic Study</span>
+                            <span class="source-badge source-badge--academic" data-i18n="sources-badge-academic-study">Academic Study</span>
                         </div>
-                        <div class="source-card-meta">1950 &middot; Hindi Parishad, Prayag</div>
-                        <div class="source-card-desc">Pioneering study of the Rama story's origin and development across Indian literary traditions, tracing how the narrative evolved over centuries.</div>
+                        <div class="source-card-meta" data-i18n="sources-c7-meta">1950 &middot; Hindi Parishad, Prayag</div>
+                        <div class="source-card-desc" data-i18n="sources-c7-desc">Pioneering study of the Rama story's origin and development across Indian literary traditions, tracing how the narrative evolved over centuries.</div>
                         <div class="source-card-tags">
-                            <span class="source-tag">Sita's Exile</span>
-                            <span class="source-tag">Lakshmana Rekha</span>
-                            <span class="source-tag">Dussehra</span>
-                            <span class="source-tag">Agni Pariksha</span>
+                            <span class="source-tag" data-i18n="sources-tag-sita-exile">Sita's Exile</span>
+                            <span class="source-tag" data-i18n="sources-tag-lakshmana-rekha">Lakshmana Rekha</span>
+                            <span class="source-tag" data-i18n="sources-tag-dussehra">Dussehra</span>
+                            <span class="source-tag" data-i18n="sources-tag-agni-pariksha">Agni Pariksha</span>
                         </div>
                     </div>
 
                     <div class="source-card" data-investigations="sita-exile agni-pariksha shambuka lakshmana-rekha">
                         <div class="source-card-header">
                             <div>
-                                <div class="source-card-author">Brockington, John</div>
-                                <div class="source-card-title">The Sanskrit Epics</div>
+                                <div class="source-card-author" data-i18n="sources-c8-author">Brockington, John</div>
+                                <div class="source-card-title" data-i18n="sources-c8-title">The Sanskrit Epics</div>
                             </div>
-                            <span class="source-badge source-badge--academic">Academic Study</span>
+                            <span class="source-badge source-badge--academic" data-i18n="sources-badge-academic-study">Academic Study</span>
                         </div>
-                        <div class="source-card-meta">1998 &middot; Brill, Leiden</div>
-                        <div class="source-card-desc">Comprehensive study of the Ramayana and Mahabharata as literary and cultural texts, with detailed analysis of textual layers and compositional history.</div>
+                        <div class="source-card-meta" data-i18n="sources-c8-meta">1998 &middot; Brill, Leiden</div>
+                        <div class="source-card-desc" data-i18n="sources-c8-desc">Comprehensive study of the Ramayana and Mahabharata as literary and cultural texts, with detailed analysis of textual layers and compositional history.</div>
                         <div class="source-card-tags">
-                            <span class="source-tag">Sita's Exile</span>
-                            <span class="source-tag">Agni Pariksha</span>
-                            <span class="source-tag">Shambuka</span>
-                            <span class="source-tag">Lakshmana Rekha</span>
+                            <span class="source-tag" data-i18n="sources-tag-sita-exile">Sita's Exile</span>
+                            <span class="source-tag" data-i18n="sources-tag-agni-pariksha">Agni Pariksha</span>
+                            <span class="source-tag" data-i18n="sources-tag-shambuka">Shambuka</span>
+                            <span class="source-tag" data-i18n="sources-tag-lakshmana-rekha">Lakshmana Rekha</span>
                         </div>
                     </div>
 
                     <div class="source-card" data-investigations="sita-exile">
                         <div class="source-card-header">
                             <div>
-                                <div class="source-card-author">Bhattacharya, Pradip</div>
-                                <div class="source-card-title">Study of the Uttara Kanda</div>
+                                <div class="source-card-author" data-i18n="sources-c9-author">Bhattacharya, Pradip</div>
+                                <div class="source-card-title" data-i18n="sources-c9-title">Study of the Uttara Kanda</div>
                             </div>
-                            <span class="source-badge source-badge--academic">Academic Study</span>
+                            <span class="source-badge source-badge--academic" data-i18n="sources-badge-academic-study">Academic Study</span>
                         </div>
-                        <div class="source-card-meta">2004 &middot; Journal of the Asiatic Society</div>
-                        <div class="source-card-desc">Analysis of the Uttara Kanda's narrative inconsistencies and evidence for its status as a later supplement to the Valmiki Ramayana.</div>
+                        <div class="source-card-meta" data-i18n="sources-c9-meta">2004 &middot; Journal of the Asiatic Society</div>
+                        <div class="source-card-desc" data-i18n="sources-c9-desc">Analysis of the Uttara Kanda's narrative inconsistencies and evidence for its status as a later supplement to the Valmiki Ramayana.</div>
                         <div class="source-card-tags">
-                            <span class="source-tag">Sita's Exile</span>
+                            <span class="source-tag" data-i18n="sources-tag-sita-exile">Sita's Exile</span>
                         </div>
                     </div>
 
                     <div class="source-card" data-investigations="sita-exile agni-pariksha">
                         <div class="source-card-header">
                             <div>
-                                <div class="source-card-author">Winternitz, Moriz</div>
-                                <div class="source-card-title">A History of Indian Literature, Vol. I</div>
+                                <div class="source-card-author" data-i18n="sources-c10-author">Winternitz, Moriz</div>
+                                <div class="source-card-title" data-i18n="sources-c10-title">A History of Indian Literature, Vol. I</div>
                             </div>
-                            <span class="source-badge source-badge--academic">Academic Study</span>
+                            <span class="source-badge source-badge--academic" data-i18n="sources-badge-academic-study">Academic Study</span>
                         </div>
-                        <div class="source-card-meta">1927 &middot; University of Calcutta</div>
-                        <div class="source-card-desc">Landmark survey of Indian literature that includes detailed analysis of the Ramayana's compositional layers and the Uttara Kanda question.</div>
+                        <div class="source-card-meta" data-i18n="sources-c10-meta">1927 &middot; University of Calcutta</div>
+                        <div class="source-card-desc" data-i18n="sources-c10-desc">Landmark survey of Indian literature that includes detailed analysis of the Ramayana's compositional layers and the Uttara Kanda question.</div>
                         <div class="source-card-tags">
-                            <span class="source-tag">Sita's Exile</span>
-                            <span class="source-tag">Agni Pariksha</span>
+                            <span class="source-tag" data-i18n="sources-tag-sita-exile">Sita's Exile</span>
+                            <span class="source-tag" data-i18n="sources-tag-agni-pariksha">Agni Pariksha</span>
                         </div>
                     </div>
 
                     <div class="source-card" data-investigations="sita-exile agni-pariksha">
                         <div class="source-card-header">
                             <div>
-                                <div class="source-card-author">Shah, U.P.</div>
-                                <div class="source-card-title">Critical Edition Methodology and the Ramayana</div>
+                                <div class="source-card-author" data-i18n="sources-c11-author">Shah, U.P.</div>
+                                <div class="source-card-title" data-i18n="sources-c11-title">Critical Edition Methodology and the Ramayana</div>
                             </div>
-                            <span class="source-badge source-badge--academic">Academic Study</span>
+                            <span class="source-badge source-badge--academic" data-i18n="sources-badge-academic-study">Academic Study</span>
                         </div>
-                        <div class="source-card-meta">1975 &middot; Oriental Institute, Baroda</div>
-                        <div class="source-card-desc">Methodological account of the principles used in constructing the Baroda Critical Edition, including manuscript selection criteria.</div>
+                        <div class="source-card-meta" data-i18n="sources-c11-meta">1975 &middot; Oriental Institute, Baroda</div>
+                        <div class="source-card-desc" data-i18n="sources-c11-desc">Methodological account of the principles used in constructing the Baroda Critical Edition, including manuscript selection criteria.</div>
                         <div class="source-card-tags">
-                            <span class="source-tag">Sita's Exile</span>
-                            <span class="source-tag">Agni Pariksha</span>
+                            <span class="source-tag" data-i18n="sources-tag-sita-exile">Sita's Exile</span>
+                            <span class="source-tag" data-i18n="sources-tag-agni-pariksha">Agni Pariksha</span>
                         </div>
                     </div>
 
                     <div class="source-card" data-investigations="lakshmana-rekha agni-pariksha ravana-dahan sita-exile">
                         <div class="source-card-header">
                             <div>
-                                <div class="source-card-author">Ramanujan, A.K.</div>
-                                <div class="source-card-title">Three Hundred Ramayanas: Five Examples and Three Thoughts on Translation</div>
+                                <div class="source-card-author" data-i18n="sources-c12-author">Ramanujan, A.K.</div>
+                                <div class="source-card-title" data-i18n="sources-c12-title">Three Hundred Ramayanas: Five Examples and Three Thoughts on Translation</div>
                             </div>
-                            <span class="source-badge source-badge--academic">Academic Study</span>
+                            <span class="source-badge source-badge--academic" data-i18n="sources-badge-academic-study">Academic Study</span>
                         </div>
-                        <div class="source-card-meta">1991 &middot; In: Richman (ed.), Many Ramayanas</div>
-                        <div class="source-card-desc">Influential essay demonstrating the vast multiplicity of Ramayana traditions and arguing against any single 'original' version.</div>
+                        <div class="source-card-meta" data-i18n="sources-c12-meta">1991 &middot; In: Richman (ed.), Many Ramayanas</div>
+                        <div class="source-card-desc" data-i18n="sources-c12-desc">Influential essay demonstrating the vast multiplicity of Ramayana traditions and arguing against any single 'original' version.</div>
                         <div class="source-card-tags">
-                            <span class="source-tag">Lakshmana Rekha</span>
-                            <span class="source-tag">Agni Pariksha</span>
-                            <span class="source-tag">Dussehra</span>
-                            <span class="source-tag">Sita's Exile</span>
+                            <span class="source-tag" data-i18n="sources-tag-lakshmana-rekha">Lakshmana Rekha</span>
+                            <span class="source-tag" data-i18n="sources-tag-agni-pariksha">Agni Pariksha</span>
+                            <span class="source-tag" data-i18n="sources-tag-dussehra">Dussehra</span>
+                            <span class="source-tag" data-i18n="sources-tag-sita-exile">Sita's Exile</span>
                         </div>
                     </div>
 
                     <div class="source-card" data-investigations="ravana-dahan lakshmana-rekha agni-pariksha sita-exile">
                         <div class="source-card-header">
                             <div>
-                                <div class="source-card-author">Richman, Paula (ed.)</div>
-                                <div class="source-card-title">Many Ramayanas: The Diversity of a Narrative Tradition in South Asia</div>
+                                <div class="source-card-author" data-i18n="sources-c13-author">Richman, Paula (ed.)</div>
+                                <div class="source-card-title" data-i18n="sources-c13-title">Many Ramayanas: The Diversity of a Narrative Tradition in South Asia</div>
                             </div>
-                            <span class="source-badge source-badge--academic">Academic Study</span>
+                            <span class="source-badge source-badge--academic" data-i18n="sources-badge-academic-study">Academic Study</span>
                         </div>
-                        <div class="source-card-meta">1991 &middot; University of California Press</div>
-                        <div class="source-card-desc">Foundational collection of essays demonstrating the plurality of Ramayana traditions across South and Southeast Asia.</div>
+                        <div class="source-card-meta" data-i18n="sources-c13-meta">1991 &middot; University of California Press</div>
+                        <div class="source-card-desc" data-i18n="sources-c13-desc">Foundational collection of essays demonstrating the plurality of Ramayana traditions across South and Southeast Asia.</div>
                         <div class="source-card-tags">
-                            <span class="source-tag">Dussehra</span>
-                            <span class="source-tag">Lakshmana Rekha</span>
-                            <span class="source-tag">Agni Pariksha</span>
-                            <span class="source-tag">Sita's Exile</span>
+                            <span class="source-tag" data-i18n="sources-tag-dussehra">Dussehra</span>
+                            <span class="source-tag" data-i18n="sources-tag-lakshmana-rekha">Lakshmana Rekha</span>
+                            <span class="source-tag" data-i18n="sources-tag-agni-pariksha">Agni Pariksha</span>
+                            <span class="source-tag" data-i18n="sources-tag-sita-exile">Sita's Exile</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- CATEGORY: REGIONAL RAMAYANAS -->
                 <div class="source-category">
-                    <h2 class="source-category-title">Regional Ramayanas</h2>
+                    <h2 class="source-category-title" data-i18n="sources-cat-regional">Regional Ramayanas</h2>
 
                     <div class="source-card" data-investigations="lakshmana-rekha">
                         <div class="source-card-header">
                             <div>
-                                <div class="source-card-author">Krittivasa Ojha</div>
-                                <div class="source-card-title">Krittivasi Ramayana (Bengali Ramayana)</div>
+                                <div class="source-card-author" data-i18n="sources-c14-author">Krittivasa Ojha</div>
+                                <div class="source-card-title" data-i18n="sources-c14-title">Krittivasi Ramayana (Bengali Ramayana)</div>
                             </div>
-                            <span class="source-badge source-badge--primary">Regional Ramayana</span>
+                            <span class="source-badge source-badge--primary" data-i18n="sources-badge-regional-ramayana">Regional Ramayana</span>
                         </div>
-                        <div class="source-card-meta">c. 15th century &middot; Various editions</div>
-                        <div class="source-card-desc">The dominant Bengali Ramayana retelling, containing one of the earliest full narratives of the Lakshmana Rekha protective boundary.</div>
+                        <div class="source-card-meta" data-i18n="sources-c14-meta">c. 15th century &middot; Various editions</div>
+                        <div class="source-card-desc" data-i18n="sources-c14-desc">The dominant Bengali Ramayana retelling, containing one of the earliest full narratives of the Lakshmana Rekha protective boundary.</div>
                         <div class="source-card-tags">
-                            <span class="source-tag">Lakshmana Rekha</span>
+                            <span class="source-tag" data-i18n="sources-tag-lakshmana-rekha">Lakshmana Rekha</span>
                         </div>
                     </div>
 
                     <div class="source-card" data-investigations="lakshmana-rekha agni-pariksha">
                         <div class="source-card-header">
                             <div>
-                                <div class="source-card-author">Kamban</div>
-                                <div class="source-card-title">Iramavataram (Kamba Ramayanam)</div>
+                                <div class="source-card-author" data-i18n="sources-c15-author">Kamban</div>
+                                <div class="source-card-title" data-i18n="sources-c15-title">Iramavataram (Kamba Ramayanam)</div>
                             </div>
-                            <span class="source-badge source-badge--primary">Regional Ramayana</span>
+                            <span class="source-badge source-badge--primary" data-i18n="sources-badge-regional-ramayana">Regional Ramayana</span>
                         </div>
-                        <div class="source-card-meta">c. 12th century &middot; Various editions</div>
-                        <div class="source-card-desc">The great Tamil Ramayana, notable for its independent literary vision and significant narrative departures from Valmiki's version.</div>
+                        <div class="source-card-meta" data-i18n="sources-c15-meta">c. 12th century &middot; Various editions</div>
+                        <div class="source-card-desc" data-i18n="sources-c15-desc">The great Tamil Ramayana, notable for its independent literary vision and significant narrative departures from Valmiki's version.</div>
                         <div class="source-card-tags">
-                            <span class="source-tag">Lakshmana Rekha</span>
-                            <span class="source-tag">Agni Pariksha</span>
+                            <span class="source-tag" data-i18n="sources-tag-lakshmana-rekha">Lakshmana Rekha</span>
+                            <span class="source-tag" data-i18n="sources-tag-agni-pariksha">Agni Pariksha</span>
                         </div>
                     </div>
 
                     <div class="source-card" data-investigations="lakshmana-rekha">
                         <div class="source-card-header">
                             <div>
-                                <div class="source-card-author">Balarama Dasa</div>
-                                <div class="source-card-title">Dandi Ramayana (Jagamohan Ramayana)</div>
+                                <div class="source-card-author" data-i18n="sources-c16-author">Balarama Dasa</div>
+                                <div class="source-card-title" data-i18n="sources-c16-title">Dandi Ramayana (Jagamohan Ramayana)</div>
                             </div>
-                            <span class="source-badge source-badge--primary">Regional Ramayana</span>
+                            <span class="source-badge source-badge--primary" data-i18n="sources-badge-regional-ramayana">Regional Ramayana</span>
                         </div>
-                        <div class="source-card-meta">c. 16th century &middot; Various editions</div>
-                        <div class="source-card-desc">Odia retelling of the Ramayana that includes the Lakshmana Rekha episode, reflecting regional elaborations of the narrative.</div>
+                        <div class="source-card-meta" data-i18n="sources-c16-meta">c. 16th century &middot; Various editions</div>
+                        <div class="source-card-desc" data-i18n="sources-c16-desc">Odia retelling of the Ramayana that includes the Lakshmana Rekha episode, reflecting regional elaborations of the narrative.</div>
                         <div class="source-card-tags">
-                            <span class="source-tag">Lakshmana Rekha</span>
+                            <span class="source-tag" data-i18n="sources-tag-lakshmana-rekha">Lakshmana Rekha</span>
                         </div>
                     </div>
 
                     <div class="source-card" data-investigations="lakshmana-rekha ravana-dahan agni-pariksha">
                         <div class="source-card-header">
                             <div>
-                                <div class="source-card-author">Tulsidas</div>
-                                <div class="source-card-title">Ramcharitmanas</div>
+                                <div class="source-card-author" data-i18n="sources-c17-author">Tulsidas</div>
+                                <div class="source-card-title" data-i18n="sources-c17-title">Ramcharitmanas</div>
                             </div>
-                            <span class="source-badge source-badge--commentary">Devotional Text</span>
+                            <span class="source-badge source-badge--commentary" data-i18n="sources-badge-devotional-text">Devotional Text</span>
                         </div>
-                        <div class="source-card-meta">1574 &middot; Various editions</div>
-                        <div class="source-card-desc">The most influential Hindi retelling of the Ramayana, a devotional masterpiece that transformed popular understanding of the Rama narrative in North India.</div>
+                        <div class="source-card-meta" data-i18n="sources-c17-meta">1574 &middot; Various editions</div>
+                        <div class="source-card-desc" data-i18n="sources-c17-desc">The most influential Hindi retelling of the Ramayana, a devotional masterpiece that transformed popular understanding of the Rama narrative in North India.</div>
                         <div class="source-card-tags">
-                            <span class="source-tag">Lakshmana Rekha</span>
-                            <span class="source-tag">Dussehra</span>
-                            <span class="source-tag">Agni Pariksha</span>
+                            <span class="source-tag" data-i18n="sources-tag-lakshmana-rekha">Lakshmana Rekha</span>
+                            <span class="source-tag" data-i18n="sources-tag-dussehra">Dussehra</span>
+                            <span class="source-tag" data-i18n="sources-tag-agni-pariksha">Agni Pariksha</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- CATEGORY: PURANIC / DEVOTIONAL -->
                 <div class="source-category">
-                    <h2 class="source-category-title">Puranic / Devotional Texts</h2>
+                    <h2 class="source-category-title" data-i18n="sources-cat-puranic">Puranic / Devotional Texts</h2>
 
                     <div class="source-card" data-investigations="lakshmana-rekha">
                         <div class="source-card-header">
                             <div>
-                                <div class="source-card-author">Anonymous</div>
-                                <div class="source-card-title">Adhyatma Ramayana</div>
+                                <div class="source-card-author" data-i18n="sources-c18-author">Anonymous</div>
+                                <div class="source-card-title" data-i18n="sources-c18-title">Adhyatma Ramayana</div>
                             </div>
-                            <span class="source-badge source-badge--commentary">Devotional Text</span>
+                            <span class="source-badge source-badge--commentary" data-i18n="sources-badge-devotional-text">Devotional Text</span>
                         </div>
-                        <div class="source-card-meta">c. 14th&ndash;15th century &middot; Various editions</div>
-                        <div class="source-card-desc">Vedantic retelling of the Ramayana embedded within the Brahmanda Purana, presenting Rama as a fully divine figure aware of his own divinity.</div>
+                        <div class="source-card-meta" data-i18n="sources-c18-meta">c. 14th&ndash;15th century &middot; Various editions</div>
+                        <div class="source-card-desc" data-i18n="sources-c18-desc">Vedantic retelling of the Ramayana embedded within the Brahmanda Purana, presenting Rama as a fully divine figure aware of his own divinity.</div>
                         <div class="source-card-tags">
-                            <span class="source-tag">Lakshmana Rekha</span>
+                            <span class="source-tag" data-i18n="sources-tag-lakshmana-rekha">Lakshmana Rekha</span>
                         </div>
                     </div>
 
                     <div class="source-card" data-investigations="ravana-dahan">
                         <div class="source-card-header">
                             <div>
-                                <div class="source-card-author">Anonymous</div>
-                                <div class="source-card-title">Vishnu Purana</div>
+                                <div class="source-card-author" data-i18n="sources-c19-author">Anonymous</div>
+                                <div class="source-card-title" data-i18n="sources-c19-title">Vishnu Purana</div>
                             </div>
-                            <span class="source-badge source-badge--commentary">Puranic Source</span>
+                            <span class="source-badge source-badge--commentary" data-i18n="sources-badge-puranic-source">Puranic Source</span>
                         </div>
-                        <div class="source-card-meta">c. 4th&ndash;5th century CE &middot; Various editions</div>
-                        <div class="source-card-desc">Major Vaishnava Purana containing references to Rama as avatar of Vishnu, contributing to the theological framework within which the epic is interpreted.</div>
+                        <div class="source-card-meta" data-i18n="sources-c19-meta">c. 4th&ndash;5th century CE &middot; Various editions</div>
+                        <div class="source-card-desc" data-i18n="sources-c19-desc">Major Vaishnava Purana containing references to Rama as avatar of Vishnu, contributing to the theological framework within which the epic is interpreted.</div>
                         <div class="source-card-tags">
-                            <span class="source-tag">Dussehra</span>
+                            <span class="source-tag" data-i18n="sources-tag-dussehra">Dussehra</span>
                         </div>
                     </div>
 
@@ -558,33 +558,33 @@
                     <div class="source-card" data-investigations="sita-exile agni-pariksha">
                         <div class="source-card-header">
                             <div>
-                                <div class="source-card-author">Anonymous</div>
-                                <div class="source-card-title">Dasharatha Jataka (Jataka No. 461)</div>
+                                <div class="source-card-author" data-i18n="sources-c20-author">Anonymous</div>
+                                <div class="source-card-title" data-i18n="sources-c20-title">Dasharatha Jataka (Jataka No. 461)</div>
                             </div>
-                            <span class="source-badge source-badge--primary">Primary Text</span>
+                            <span class="source-badge source-badge--primary" data-i18n="sources-badge-primary-text">Primary Text</span>
                         </div>
-                        <div class="source-card-meta">c. 3rd century BCE &middot; Pali Text Society editions</div>
-                        <div class="source-card-desc">Buddhist version of the Rama story with no divine elements, no abduction of Sita, and no war &mdash; one of the earliest independent Rama narratives.</div>
+                        <div class="source-card-meta" data-i18n="sources-c20-meta">c. 3rd century BCE &middot; Pali Text Society editions</div>
+                        <div class="source-card-desc" data-i18n="sources-c20-desc">Buddhist version of the Rama story with no divine elements, no abduction of Sita, and no war &mdash; one of the earliest independent Rama narratives.</div>
                         <div class="source-card-tags">
-                            <span class="source-tag">Sita's Exile</span>
-                            <span class="source-tag">Agni Pariksha</span>
+                            <span class="source-tag" data-i18n="sources-tag-sita-exile">Sita's Exile</span>
+                            <span class="source-tag" data-i18n="sources-tag-agni-pariksha">Agni Pariksha</span>
                         </div>
                     </div>
 
                     <div class="source-card" data-investigations="lakshmana-rekha agni-pariksha shambuka">
                         <div class="source-card-header">
                             <div>
-                                <div class="source-card-author">Vimalasuri</div>
-                                <div class="source-card-title">Paumacariya (Padmacharita)</div>
+                                <div class="source-card-author" data-i18n="sources-c21-author">Vimalasuri</div>
+                                <div class="source-card-title" data-i18n="sources-c21-title">Paumacariya (Padmacharita)</div>
                             </div>
-                            <span class="source-badge source-badge--primary">Primary Text</span>
+                            <span class="source-badge source-badge--primary" data-i18n="sources-badge-primary-text">Primary Text</span>
                         </div>
-                        <div class="source-card-meta">c. 4th century CE &middot; Various editions</div>
-                        <div class="source-card-desc">The earliest surviving Jain Ramayana, which rationalizes the narrative by removing supernatural elements and recasting Ravana as a Jain figure.</div>
+                        <div class="source-card-meta" data-i18n="sources-c21-meta">c. 4th century CE &middot; Various editions</div>
+                        <div class="source-card-desc" data-i18n="sources-c21-desc">The earliest surviving Jain Ramayana, which rationalizes the narrative by removing supernatural elements and recasting Ravana as a Jain figure.</div>
                         <div class="source-card-tags">
-                            <span class="source-tag">Lakshmana Rekha</span>
-                            <span class="source-tag">Agni Pariksha</span>
-                            <span class="source-tag">Shambuka</span>
+                            <span class="source-tag" data-i18n="sources-tag-lakshmana-rekha">Lakshmana Rekha</span>
+                            <span class="source-tag" data-i18n="sources-tag-agni-pariksha">Agni Pariksha</span>
+                            <span class="source-tag" data-i18n="sources-tag-shambuka">Shambuka</span>
                         </div>
                     </div>
                 </div>
@@ -595,9 +595,9 @@
             <div class="section-divider" role="separator"></div>
 
             <div class="evidence-card">
-                <div class="evidence-card-type">Note</div>
-                <h4>This is a representative selection</h4>
-                <p>The sources above represent a selection of the most important references. The complete source database is loaded dynamically from <code>data/sources.js</code> and includes over 75 scholarly works spanning critical editions, academic studies, regional Ramayanas, Puranic texts, performance traditions, and modern interpretations.</p>
+                <div class="evidence-card-type" data-i18n="sources-note-type">Note</div>
+                <h4 data-i18n="sources-note-title">This is a representative selection</h4>
+                <p data-i18n="sources-note-text">The sources above represent a selection of the most important references. The complete source database is loaded dynamically from <code>data/sources.js</code> and includes over 75 scholarly works spanning critical editions, academic studies, regional Ramayanas, Puranic texts, performance traditions, and modern interpretations.</p>
             </div>
 
         </div>
