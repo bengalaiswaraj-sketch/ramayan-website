@@ -41,6 +41,12 @@ const SEARCH_INDEX = [
     tags: ["shambuka", "caste", "shudra", "tapas", "dharma", "uttara kanda", "social justice"]
   },
   {
+    title: "Sita's Descent into the Earth — A Story from the Uttara Kanda",
+    url: "facts/sita-earth.html",
+    content: "Sita earth Bhoodevi Prithvi descent swallowed ground Mother Earth golden throne return exile Uttara Kanda later addition Valmiki Ramayana six books Yuddha Kanda ending coronation Rama Sita together sitaya saha dharma ruling kingdom Luv Kush twins second test purity chastity proof Agni Pariksha already proven divine witnesses theological development goddess Vaishnavite Puranic agriculture furrow Janaka critical edition manuscript interpolation",
+    tags: ["sita", "bhoodevi", "earth", "descent", "uttara kanda", "interpolation", "later addition"]
+  },
+  {
     title: "Timeline — Evolution of the Ramayana Text",
     url: "timeline.html",
     content: "timeline chronology dates history evolution Ramayana composition oral tradition written manuscript transmission century BCE CE Vedic period Mauryan Gupta medieval modern critical edition recension regional vernacular translation adaptation performance centuries layers growth interpolation addition",
