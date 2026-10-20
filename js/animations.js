@@ -1,5 +1,5 @@
 /* ==========================================================================
-   animations.js — Scroll-Based Animations
+   animations.js — Scroll-Based Animations, Sacred Aura Particles & 3D FX
    Ramayana: Beyond What We Were Told
    ========================================================================== */
 
@@ -82,7 +82,6 @@ const Animations = (() => {
             return;
         }
 
-        // Observer for individual animated elements
         observer = new IntersectionObserver(handleIntersection, {
             root: null,
             rootMargin: '0px 0px -60px 0px',
@@ -94,7 +93,6 @@ const Animations = (() => {
         );
         animatedElements.forEach(el => observer.observe(el));
 
-        // Observer for staggered children
         staggerObserver = new IntersectionObserver(handleStaggerIntersection, {
             root: null,
             rootMargin: '0px 0px -40px 0px',
@@ -107,7 +105,6 @@ const Animations = (() => {
 
     /**
      * Lakshmana Rekha line-drawing animation trigger
-     * Adds the .draw-line class to trigger CSS keyframe animation
      */
     function setupLakshmanaRekha() {
         const rekhaElements = document.querySelectorAll('.lakshmana-rekha');
@@ -133,6 +130,187 @@ const Animations = (() => {
     }
 
     /**
+     * Sacred Golden Light Particles in Hero / Article Hero
+     */
+    function setupSacredParticles() {
+        if (prefersReducedMotion) return;
+
+        const targetHero = document.querySelector('.hero, .article-hero');
+        if (!targetHero || targetHero.querySelector('.hero-particles-canvas')) return;
+
+        const canvas = document.createElement('canvas');
+        canvas.className = 'hero-particles-canvas';
+        canvas.setAttribute('aria-hidden', 'true');
+        targetHero.insertBefore(canvas, targetHero.firstChild);
+
+        const ctx = canvas.getContext('2d');
+        let width = 0;
+        let height = 0;
+        const particles = [];
+        const PARTICLE_COUNT = 38;
+        let mouseX = -9999;
+        let mouseY = -9999;
+
+        function resize() {
+            width = canvas.width = targetHero.offsetWidth;
+            height = canvas.height = targetHero.offsetHeight;
+        }
+
+        function createParticle() {
+            const isGold = Math.random() > 0.35;
+            return {
+                x: Math.random() * (width || 800),
+                y: Math.random() * (height || 600),
+                radius: Math.random() * 2.6 + 0.9,
+                vy: -(Math.random() * 0.45 + 0.15),
+                vx: (Math.random() - 0.5) * 0.35,
+                alpha: Math.random() * 0.55 + 0.2,
+                pulseSpeed: Math.random() * 0.02 + 0.008,
+                pulsePhase: Math.random() * Math.PI * 2,
+                color: isGold ? '217, 119, 6' : '37, 99, 235'
+            };
+        }
+
+        resize();
+        for (let i = 0; i < PARTICLE_COUNT; i++) {
+            particles.push(createParticle());
+        }
+
+        window.addEventListener('resize', resize, { passive: true });
+        targetHero.addEventListener('mousemove', (e) => {
+            const rect = targetHero.getBoundingClientRect();
+            mouseX = e.clientX - rect.left;
+            mouseY = e.clientY - rect.top;
+        }, { passive: true });
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            particles.forEach(p => {
+                p.y += p.vy;
+                p.x += p.vx;
+                p.pulsePhase += p.pulseSpeed;
+
+                // Subtle gentle attraction/repulsion near mouse
+                const dx = p.x - mouseX;
+                const dy = p.y - mouseY;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 110 && dist > 0) {
+                    p.x += (dx / dist) * 0.45;
+                    p.y += (dy / dist) * 0.45;
+                }
+
+                if (p.y < -10) {
+                    p.y = height + 10;
+                    p.x = Math.random() * width;
+                }
+                if (p.x < -10) p.x = width + 10;
+                if (p.x > width + 10) p.x = -10;
+
+                const currentAlpha = Math.max(0.1, Math.min(0.85, p.alpha + Math.sin(p.pulsePhase) * 0.2));
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${p.color}, ${currentAlpha})`;
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = `rgba(${p.color}, 0.6)`;
+                ctx.fill();
+            });
+            requestAnimationFrame(animate);
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    /**
+     * 3D Interactive Card Tilt & Mouse-Tracking Glow
+     */
+    function setup3DTiltCards() {
+        if (prefersReducedMotion) return;
+
+        const cards = document.querySelectorAll(
+            '.revelation-card, .conspiracy-card, .method-card, .tradition-item, .impact-stat-card'
+        );
+
+        cards.forEach(card => {
+            card.classList.add('tilt-card');
+
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const rotateX = ((y - centerY) / centerY) * -3.5;
+                const rotateY = ((x - centerX) / centerX) * 3.5;
+
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+                card.style.transform = `perspective(900px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-4px)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
+    }
+
+    /**
+     * Animated Number Counters for Impact Statistics
+     */
+    function setupAnimatedCounters() {
+        const counters = document.querySelectorAll('.stat-counter[data-target]');
+        if (!counters.length) return;
+
+        const counterObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                const el = entry.target;
+                const target = parseInt(el.getAttribute('data-target'), 10);
+                const suffix = el.getAttribute('data-suffix') || '';
+                const duration = 1400;
+                const startTime = performance.now();
+
+                function tick(now) {
+                    const elapsed = now - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    const current = Math.round(target * eased);
+                    el.textContent = current.toLocaleString() + suffix;
+                    if (progress < 1) {
+                        requestAnimationFrame(tick);
+                    }
+                }
+
+                requestAnimationFrame(tick);
+                obs.unobserve(el);
+            });
+        }, { threshold: 0.3 });
+
+        counters.forEach(c => counterObserver.observe(c));
+    }
+
+    /**
+     * Interactive Colonial Distortion vs Original Sanskrit Tabs
+     */
+    function setupDistortionTabs() {
+        const tabBtns = document.querySelectorAll('.distortion-tab-btn');
+        if (!tabBtns.length) return;
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.getAttribute('data-target-panel');
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                document.querySelectorAll('.distortion-panel').forEach(panel => {
+                    panel.classList.toggle('active', panel.id === targetId);
+                });
+            });
+        });
+    }
+
+    /**
      * Update reading progress bar via CSS variable
      */
     function updateReadingProgress() {
@@ -147,7 +325,6 @@ const Animations = (() => {
         const progress = Math.min(scrollTop / docHeight, 1);
         document.documentElement.style.setProperty('--progress', progress.toString());
 
-        // Also update a progress bar element if it exists
         if (progressBar) {
             progressBar.style.transform = `scaleX(${progress})`;
             progressBar.setAttribute('aria-valuenow', Math.round(progress * 100));
@@ -163,7 +340,6 @@ const Animations = (() => {
         const scrollY = window.scrollY;
         const heroHeight = heroSection.offsetHeight;
 
-        // Only apply parallax while hero is in view
         if (scrollY > heroHeight) return;
 
         const parallaxOffset = scrollY * 0.3;
@@ -184,23 +360,19 @@ const Animations = (() => {
     function init() {
         checkReducedMotion();
 
-        // Set up progress bar reference
-        progressBar = document.querySelector('.reading-progress-bar, .progress-bar');
-
-        // Set up hero section reference
+        progressBar = document.querySelector('.reading-progress-bar, .progress-bar, .reading-progress');
         heroSection = document.querySelector('.hero, .hero-section');
 
-        // Initialize scroll animations
         setupScrollAnimations();
-
-        // Initialize Lakshmana Rekha line-drawing
         setupLakshmanaRekha();
+        setupSacredParticles();
+        setup3DTiltCards();
+        setupAnimatedCounters();
+        setupDistortionTabs();
 
-        // Scroll-driven updates
         window.addEventListener('scroll', handleScroll, { passive: true });
-        handleScroll(); // Set initial state
+        handleScroll();
 
-        // If animations are disabled via config, reveal everything
         if (typeof SITE_CONFIG !== 'undefined' && !SITE_CONFIG.animationsEnabled) {
             revealAllElements();
         }

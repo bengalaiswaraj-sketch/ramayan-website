@@ -1,79 +1,85 @@
 /* ==========================================================================
    search-index.js — Search Index
-   Ramayana: Beyond What We Were Told
+   Ramayana: Exposing Colonial Distortions & Rediscovering the Truth
    ========================================================================== */
 
 const SEARCH_INDEX = [
   {
-    title: "Home — Ramayana: Beyond What We Were Told",
+    title: "Home — Our Mission & Exposing the Colonial Conspiracy",
     url: "index.html",
-    content: "Ramayana textual history critical edition manuscript evidence Valmiki epic India Sanskrit scholarly analysis investigations beyond what we were told return to the text examine the evidence rediscover the story Baroda critical edition seven kandas interpolation recension transmission",
-    tags: ["home", "ramayana", "textual history", "introduction"]
+    content: "Ramayana truth British colonial conspiracy Indian scriptures Vedas Upanishads Bhagavad Gita Mahabharata Macaulay 1835 Max Muller secret letters Ralph Griffith mistranslation Lord Rama Mata Sita Baroda Critical Edition 2000 manuscripts Ahalya pada sparsha dharma meaning Uttara Kanda interpolation fake myths exposed simple layman English",
+    tags: ["home", "colonial conspiracy", "mission", "macaulay", "max muller", "griffith", "vedas", "gita", "ramayana"]
   },
   {
-    title: "Sita's Exile — Did Valmiki's Story End Before?",
+    title: "Eye-Opener Scripture Quiz — 18 Controversial Questions & Proofs",
+    url: "quiz.html",
+    content: "Interactive MCQ quiz controversial questions doubtful questions spiritual seekers Lord Rama Mata Sita Sita exile washerman dhobi Shambuka Lakshmana Rekha Agni Pariksha Ravana Dahan Brahmahatya Macaulay Max Muller Griffith Vedas Gita Upanishads Mahabharata detailed simple explanation scripture proof",
+    tags: ["quiz", "mcq", "questions", "test", "explanations", "colonial conspiracy", "lord rama", "mata sita"]
+  },
+  {
+    title: "Sita's Exile Myth — Did Lord Rama Really Banish Pregnant Mata Sita?",
     url: "facts/sita-exile.html",
-    content: "Uttara Kanda exile washerman gossip Sita banishment Yuddha Kanda ending coronation critical edition manuscript interpolation Rama Ayodhya dharma Bhatt Baroda later addition seventh book composition 200 400 CE pativrata pregnancy twins Lava Kusha abandoned forest Valmiki ashram dharma king duty public opinion loka dharma stylistic analysis vocabulary linguistic evidence Jacobi Winternitz Brockington Sohnen-Thieme authorship composition date",
-    tags: ["sita", "exile", "uttara kanda", "interpolation", "washerman", "banishment", "later addition"]
+    content: "Uttara Kanda exile washerman dhobi gossip Sita banishment Yuddha Kanda happy ending coronation 10000 years Phalashruti critical edition manuscript interpolation Lord Rama Mata Sita Ayodhya Baroda later addition seventh book colonial amplification",
+    tags: ["sita", "exile", "uttara kanda", "interpolation", "washerman", "dhobi", "banishment"]
   },
   {
-    title: "Dussehra and Ravana Dahan — When Did Burning Ravana Begin?",
+    title: "Ravana Dahan & Brahmahatya — Did Rama Burn Effigies or Commit Sin?",
     url: "facts/ravana-dahan.html",
-    content: "Dussehra Vijayadashami Ravana effigy burning dahan festival Ramlila theatrical performance Mughal period medieval celebration Tulsidas Ramcharitmanas North India tradition ritual victory good over evil ten-headed demon Lanka Dasara Navaratri Durga autumn festival historical evidence origin evolution Lutgendorf Schechner Kapur Ramnagar Benares",
-    tags: ["dussehra", "ravana", "burning", "festival", "ramlila", "vijayadashami", "effigy"]
+    content: "Dussehra Vijayadashami Ravana effigy burning dahan funeral rites enmity ends with death maranantani vairani Brahmahatya sin penance myth Rameswaram Shiva Linga atatayi tyrant Dharma Yuddha Kanda",
+    tags: ["dussehra", "ravana", "burning", "brahmahatya", "funeral", "effigy"]
   },
   {
-    title: "Lakshmana Rekha — The Line Valmiki Never Drew",
+    title: "Lakshmana Rekha — Did Mata Sita Cross a Magic Line Out of Disobedience?",
     url: "facts/lakshmana-rekha.html",
-    content: "Lakshmana Rekha protective line boundary Sita abduction Maricha golden deer forest Panchavati Aranyakanda Krittivasa Bengali Ramayana Tulsidas Ramcharitmanas Kamban Tamil regional variation folk tradition oral narrative popular culture Balarama Dasa Odia magic circle protective boundary innovation literary invention cross threshold safeguard absent original Valmiki text",
-    tags: ["lakshmana rekha", "protective line", "boundary", "sita abduction", "regional", "folk tradition"]
+    content: "Lakshmana Rekha protective line boundary Sita abduction Maricha golden deer Panchavati Aranyakanda Atithi Dharma hospitality Krittivasa Bengali Ramayana Somadeva Tulsidas Ramcharitmanas absent from Valmiki Ramayana",
+    tags: ["lakshmana rekha", "protective line", "boundary", "sita abduction", "atithi dharma"]
   },
   {
-    title: "Agni Pariksha — What the Manuscripts Actually Say",
+    title: "Agni Pariksha Truth — Did Rama Force Sita Into Fire or Did Sita Command It?",
     url: "facts/agni-pariksha.html",
-    content: "Agni Pariksha fire ordeal test Sita purity chastity Rama doubt Lanka war victory Yuddhakanda manuscript variant critical edition interpolation illusory Sita maya Sita shadow Sita theological justification devotional reinterpretation gender patriarchy feminist reading Goldman Hess Volga Divakaruni textual evidence fire god Agni witness Brahma divinity revelation",
-    tags: ["agni pariksha", "fire ordeal", "sita", "purity test", "manuscript", "interpolation"]
+    content: "Agni Pariksha fire ordeal Sita commands Lakshmana fierce autonomy public vindication Lord Rama never doubted Sita Agni Deva divine witness Maya Sita Chhaya Sita Tulsidas Yuddha Kanda",
+    tags: ["agni pariksha", "fire ordeal", "sita", "purity", "vindication"]
   },
   {
-    title: "Shambuka — Caste, Dharma, and a Troubling Episode",
+    title: "The Shambuka Story — A Fake Addition Used for Colonial Divide-and-Rule",
     url: "facts/shambuka.html",
-    content: "Shambuka Shudra tapas penance austerity Rama killing slaying Uttara Kanda caste varna dharma Brahmin child death brahmahatya social order dharmashastra Ambedkar Dalit critique Ilaiah Thapar Olivelle Yengde caste discrimination untouchability interpolation later addition textual criticism manusmriti dharmasutra ashvamedha horse sacrifice social justice",
-    tags: ["shambuka", "caste", "shudra", "tapas", "dharma", "uttara kanda", "social justice"]
+    content: "Shambuka Shudra tapas penance Rama killing Uttara Kanda interpolation absent from Baroda Critical Edition Guha Nishada chief brother Shabari berries equality colonial divide and rule Herbert Risley caste",
+    tags: ["shambuka", "caste", "shudra", "guha", "shabari", "uttara kanda", "divide and rule"]
   },
   {
-    title: "Sita's Descent into the Earth — A Story from the Uttara Kanda",
+    title: "Sita's Descent into the Earth — Why Valmiki's Ramayana Ended in Joy, Not Tragedy",
     url: "facts/sita-earth.html",
-    content: "Sita earth Bhoodevi Prithvi descent swallowed ground Mother Earth golden throne return exile Uttara Kanda later addition Valmiki Ramayana six books Yuddha Kanda ending coronation Rama Sita together sitaya saha dharma ruling kingdom Luv Kush twins second test purity chastity proof Agni Pariksha already proven divine witnesses theological development goddess Vaishnavite Puranic agriculture furrow Janaka critical edition manuscript interpolation",
-    tags: ["sita", "bhoodevi", "earth", "descent", "uttara kanda", "interpolation", "later addition"]
+    content: "Sita earth Bhoodevi Prithvi descent swallowed ground Mother Earth golden throne Uttara Kanda later addition Valmiki Ramayana six books Yuddha Kanda happy ending Rama and Sita rule together Adi Shakti Ayonija",
+    tags: ["sita", "bhoodevi", "earth", "descent", "uttara kanda", "adi shakti"]
   },
   {
-    title: "Timeline — Evolution of the Ramayana Text",
+    title: "Timeline — 2,500 Years from Valmiki's Truth to Colonial Mistranslations",
     url: "timeline.html",
-    content: "timeline chronology dates history evolution Ramayana composition oral tradition written manuscript transmission century BCE CE Vedic period Mauryan Gupta medieval modern critical edition recension regional vernacular translation adaptation performance centuries layers growth interpolation addition",
-    tags: ["timeline", "chronology", "history", "evolution", "dates"]
+    content: "timeline chronology dates history Valmiki 6 books Uttara Kanda addition 1835 Macaulay Minute 1866 Max Muller letters 1870 Ralph Griffith translation Manmatha Nath Dutt Swami Vivekananda Sri Aurobindo Baroda Critical Edition",
+    tags: ["timeline", "chronology", "history", "colonial era", "macaulay", "max muller"]
   },
   {
-    title: "Methodology — How We Examine the Evidence",
+    title: "How We Prove It — 6 Simple Detective Tools that Catch Fake Stories",
     url: "methodology.html",
-    content: "methodology approach textual criticism critical edition manuscript comparison stemmatic analysis recension collation interpolation detection linguistic analysis vocabulary stylistic evidence dating techniques internal external evidence cross-referencing archaeological epigraphic scholarly standards peer review academic rigor evidence-based transparent balanced",
-    tags: ["methodology", "textual criticism", "evidence", "approach", "scholarly"]
+    content: "methodology how we prove it 2000 palm leaf manuscripts Baroda Critical Edition Sanskrit grammar Anushtubh meter Phalashruti character contradictions colonial translation tricks spurned Ahalya",
+    tags: ["methodology", "proof", "manuscripts", "baroda critical edition", "detective tools"]
   },
   {
-    title: "Sources — Bibliography and References",
+    title: "Sources — Original Sanskrit Manuscripts & Historical Archives",
     url: "sources.html",
-    content: "sources bibliography references academic works books articles journals critical edition translations studies Bhatt Goldman Pollock Brockington Bulcke Richman Lutgendorf Thapar Ambedkar primary texts secondary studies regional Ramayanas Puranic sources scholarly resources",
-    tags: ["sources", "bibliography", "references", "books", "academic"]
+    content: "sources bibliography references Baroda Critical Edition Bhatt Goldman Pollock Brockington Bulcke Macaulay Max Muller Griffith Manmatha Nath Dutt primary texts",
+    tags: ["sources", "bibliography", "references", "manuscripts"]
   },
   {
-    title: "About — Ramayana: Beyond What We Were Told",
+    title: "About Our Mission — Exposing the Colonial Conspiracy Against Indian Scriptures",
     url: "about.html",
-    content: "about project mission purpose textual history examination evidence scholarly investigation Ramayana study academic approach devotion respect critical inquiry faith reason balance transparency open source cultural heritage Indian epic literature education accessible public scholarship",
-    tags: ["about", "project", "mission", "purpose"]
+    content: "about our mission agenda British colonial conspiracy corrupt modify Indian scriptures Vedas Upanishads Bhagavad Gita Mahabharata Ramayana unity spiritual power Lord Rama Mata Sita simple layman English",
+    tags: ["about", "mission", "agenda", "colonial conspiracy", "scriptures"]
   },
   {
-    title: "Glossary — Key Terms and Concepts",
+    title: "Glossary — Simple Guide to Sanskrit & Scripture Terms",
     url: "glossary.html",
-    content: "glossary definitions terms Sanskrit concepts Kanda Sarga critical edition recension interpolation anushtubh dharma adharma tapas brahmahatya shakti purusha varna pativrata agni pariksha loka dharma ashvamedha rakshasa avatar bhakti dharmashastra purana ramlila shloka colophon Devanagari manuscript Uttara Kanda Baroda Mahabharata Vedic meter verse book chapter vocabulary technical",
-    tags: ["glossary", "definitions", "terms", "sanskrit", "concepts"]
+    content: "glossary simple definitions Sanskrit terms Dharma Adharma Agni Pariksha Anushtubh Avatar Baroda Critical Edition Bhakti Brahmahatya Interpolation Kanda Pativrata Shakti Tapas Uttara Kanda Varna Vedic",
+    tags: ["glossary", "definitions", "terms", "sanskrit"]
   }
 ];
