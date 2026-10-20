@@ -157,17 +157,17 @@ const Animations = (() => {
         }
 
         function createParticle() {
-            const isGold = Math.random() > 0.35;
+            const isGold = Math.random() > 0.3;
             return {
                 x: Math.random() * (width || 800),
                 y: Math.random() * (height || 600),
-                radius: Math.random() * 2.6 + 0.9,
-                vy: -(Math.random() * 0.45 + 0.15),
+                radius: Math.random() * 2.8 + 1.1,
+                vy: -(Math.random() * 0.48 + 0.16),
                 vx: (Math.random() - 0.5) * 0.35,
-                alpha: Math.random() * 0.55 + 0.2,
+                alpha: Math.random() * 0.55 + 0.25,
                 pulseSpeed: Math.random() * 0.02 + 0.008,
                 pulsePhase: Math.random() * Math.PI * 2,
-                color: isGold ? '217, 119, 6' : '37, 99, 235'
+                color: isGold ? '217, 119, 6' : '194, 65, 12'
             };
         }
 
@@ -228,7 +228,7 @@ const Animations = (() => {
         if (prefersReducedMotion) return;
 
         const cards = document.querySelectorAll(
-            '.revelation-card, .conspiracy-card, .method-card, .tradition-item, .impact-stat-card'
+            '.revelation-card, .conspiracy-card, .method-card, .tradition-item, .impact-stat-card, .evidence-card, .source-card, .glossary-entry, .sanskrit-verse-card'
         );
 
         cards.forEach(card => {
@@ -259,15 +259,17 @@ const Animations = (() => {
      * Animated Number Counters for Impact Statistics
      */
     function setupAnimatedCounters() {
-        const counters = document.querySelectorAll('.stat-counter[data-target]');
+        const counters = document.querySelectorAll('[data-count-to], .stat-counter[data-target]');
         if (!counters.length) return;
 
         const counterObserver = new IntersectionObserver((entries, obs) => {
             entries.forEach(entry => {
                 if (!entry.isIntersecting) return;
                 const el = entry.target;
-                const target = parseInt(el.getAttribute('data-target'), 10);
-                const suffix = el.getAttribute('data-suffix') || '';
+                const rawTarget = el.getAttribute('data-count-to') || el.getAttribute('data-target');
+                const target = parseInt(rawTarget, 10);
+                if (isNaN(target)) return;
+                const suffix = el.getAttribute('data-count-suffix') || el.getAttribute('data-suffix') || '';
                 const duration = 1400;
                 const startTime = performance.now();
 
@@ -299,7 +301,7 @@ const Animations = (() => {
 
         tabBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                const targetId = btn.getAttribute('data-target-panel');
+                const targetId = btn.getAttribute('data-tab-target') || btn.getAttribute('data-target-panel');
                 tabBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
 

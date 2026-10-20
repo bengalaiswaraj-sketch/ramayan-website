@@ -1,5 +1,5 @@
 /* ==========================================================================
-   animations-fx.css — Special Effects, Sacred Aura, Colonial Expose & Quiz UI
+   animations-fx.css — Sacred Heritage Design Overhaul, Special FX & Quiz UI
    Ramayana: Exposing the Colonial Conspiracy & Restoring the Original Truth
    ========================================================================== */
 
@@ -13,10 +13,21 @@
 
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(217, 119, 6, 0.2), 0 0 30px rgba(37, 99, 235, 0.12);
+    box-shadow: 0 0 15px rgba(217, 119, 6, 0.25), 0 0 32px rgba(194, 65, 12, 0.14);
   }
   50% {
-    box-shadow: 0 0 28px rgba(217, 119, 6, 0.4), 0 0 55px rgba(37, 99, 235, 0.25);
+    box-shadow: 0 0 28px rgba(217, 119, 6, 0.5), 0 0 58px rgba(194, 65, 12, 0.28);
+  }
+}
+
+@keyframes pulseDotBeat {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.7);
+  }
+  50% {
+    transform: scale(1.25);
+    box-shadow: 0 0 0 8px rgba(217, 119, 6, 0);
   }
 }
 
@@ -55,7 +66,104 @@
 }
 
 /* --------------------------------------------------------------------------
-   2. Scroll-Triggered Fade & Reveal Classes
+   2. Global Sacred Heritage Visual Redesign (Applies Across All 13 Pages)
+   -------------------------------------------------------------------------- */
+.site-logo .logo-text {
+  background: linear-gradient(135deg, #7C2D12 0%, #B45309 50%, #D97706 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em;
+}
+
+html[data-theme="dark"] .site-logo .logo-text {
+  background: linear-gradient(135deg, #FDE68A 0%, #F59E0B 55%, #FB923C 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Article Hero & Page Headers across Investigation, About, Methodology, Timeline, Sources, Glossary, Quiz */
+.article-hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(217, 119, 6, 0.18) 0%, rgba(194, 65, 12, 0.08) 50%, transparent 80%),
+    linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-deepest) 100%) !important;
+  border-bottom: 1px solid var(--border-gold) !important;
+}
+
+html[data-theme="dark"] .article-hero {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(245, 158, 11, 0.2) 0%, rgba(234, 88, 12, 0.1) 50%, transparent 80%),
+    linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-deepest) 100%) !important;
+}
+
+/* Ornate Sacred Styling for Cards Across All Pages */
+.revelation-card,
+.method-card,
+.tradition-item,
+.evidence-card,
+.source-card,
+.glossary-entry,
+.sanskrit-verse-card {
+  background: var(--bg-elevated) !important;
+  border: 1px solid var(--border-default) !important;
+  border-top: 3px solid var(--accent) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
+}
+
+.revelation-card:hover,
+.method-card:hover,
+.tradition-item:hover,
+.evidence-card:hover,
+.source-card:hover,
+.glossary-entry:hover {
+  border-color: var(--border-gold) !important;
+  box-shadow: var(--shadow-lg), var(--shadow-gold) !important;
+}
+
+/* Section Overlines & Headings */
+.section-overline,
+.article-kanda,
+.card-label {
+  display: inline-block;
+  padding: 0.25rem 0.85rem;
+  border-radius: 9999px;
+  background: rgba(180, 83, 9, 0.1);
+  border: 1px solid rgba(180, 83, 9, 0.28);
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .section-overline,
+html[data-theme="dark"] .article-kanda,
+html[data-theme="dark"] .card-label {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: rgba(245, 158, 11, 0.35);
+  color: #FBBF24 !important;
+}
+
+/* Primary Buttons with Royal Bhagwa-Gold Gradient */
+.btn-primary {
+  background: linear-gradient(135deg, #D97706 0%, #B45309 50%, #9A3412 100%) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(251, 191, 36, 0.45) !important;
+  box-shadow: 0 4px 18px rgba(180, 83, 9, 0.3) !important;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(180, 83, 9, 0.45) !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. Scroll-Triggered Fade & Reveal Classes
    -------------------------------------------------------------------------- */
 .fade-in,
 .slide-in-left,
@@ -84,7 +192,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   3. Hero Enhancements & Sacred Particle Canvas
+   4. Hero Enhancements, Mission Alert Pill & Sacred Particle Canvas
    -------------------------------------------------------------------------- */
 .hero-particles-canvas {
   position: absolute;
@@ -95,15 +203,17 @@
   z-index: 1;
 }
 
+/* Supports both .mission-alert-pill and .hero-mission-pill */
+.mission-alert-pill,
 .hero-mission-pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.45rem 1.15rem;
+  gap: 0.65rem;
+  padding: 0.5rem 1.25rem;
   border-radius: 9999px;
-  background: linear-gradient(135deg, rgba(217, 119, 6, 0.14), rgba(37, 99, 235, 0.14));
-  border: 1px solid rgba(217, 119, 6, 0.45);
-  color: #B45309;
+  background: linear-gradient(135deg, rgba(217, 119, 6, 0.16), rgba(194, 65, 12, 0.14));
+  border: 1px solid rgba(180, 83, 9, 0.5);
+  color: #9A3412;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -113,22 +223,27 @@
   backdrop-filter: blur(8px);
 }
 
+html[data-theme="dark"] .mission-alert-pill,
 html[data-theme="dark"] .hero-mission-pill {
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(96, 165, 250, 0.18));
-  border-color: rgba(245, 158, 11, 0.5);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.22), rgba(234, 88, 12, 0.18));
+  border-color: rgba(251, 191, 36, 0.55);
   color: #FBBF24;
 }
 
+.mission-alert-pill .pulse-dot,
 .hero-mission-pill .pill-dot {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background: #D97706;
-  box-shadow: 0 0 8px #D97706;
+  box-shadow: 0 0 10px #D97706;
+  animation: pulseDotBeat 2s infinite ease-in-out;
+  flex-shrink: 0;
 }
 
-.hero-title-main {
-  background: linear-gradient(135deg, var(--text-primary) 0%, #1E40AF 45%, #B45309 85%, var(--text-primary) 100%);
+.hero-title-main,
+.shimmer-gold-text {
+  background: linear-gradient(135deg, #431407 0%, #B45309 35%, #D97706 65%, #7C2D12 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -136,8 +251,9 @@ html[data-theme="dark"] .hero-mission-pill {
   animation: shimmerSweep 8s linear infinite;
 }
 
-html[data-theme="dark"] .hero-title-main {
-  background: linear-gradient(135deg, #FFFFFF 0%, #93C5FD 45%, #FBBF24 85%, #FFFFFF 100%);
+html[data-theme="dark"] .hero-title-main,
+html[data-theme="dark"] .shimmer-gold-text {
+  background: linear-gradient(135deg, #FFFBEB 0%, #FBBF24 40%, #FB923C 75%, #FFFBEB 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -149,7 +265,7 @@ html[data-theme="dark"] .hero-title-main {
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, #D97706 0%, #B45309 100%);
+  background: linear-gradient(135deg, #EA580C 0%, #B45309 100%);
   color: #FFFFFF !important;
   font-family: var(--font-body);
   font-size: var(--text-sm);
@@ -157,39 +273,42 @@ html[data-theme="dark"] .hero-title-main {
   letter-spacing: 0.04em;
   border-radius: var(--radius-md);
   text-decoration: none;
-  border: 1px solid rgba(251, 191, 36, 0.5);
-  box-shadow: 0 4px 20px rgba(217, 119, 6, 0.35);
+  border: 1px solid rgba(251, 191, 36, 0.55);
+  box-shadow: 0 4px 20px rgba(217, 119, 6, 0.38);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
 }
 
 .btn-quiz-glow:hover {
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 8px 28px rgba(217, 119, 6, 0.55);
+  box-shadow: 0 8px 28px rgba(217, 119, 6, 0.6);
 }
 
-/* Nav Quiz Highlight Pill */
+/* Nav Quiz Highlight Pill (supports both .nav-quiz-highlight and .nav-quiz-link) */
+.nav-quiz-highlight,
 .nav-quiz-link {
-  background: linear-gradient(135deg, rgba(217, 119, 6, 0.14), rgba(217, 119, 6, 0.24)) !important;
-  color: #B45309 !important;
-  border: 1px solid rgba(217, 119, 6, 0.4) !important;
+  background: linear-gradient(135deg, rgba(217, 119, 6, 0.16), rgba(194, 65, 12, 0.26)) !important;
+  color: #9A3412 !important;
+  border: 1px solid rgba(180, 83, 9, 0.45) !important;
   border-radius: 9999px !important;
-  padding: 0.35rem 0.85rem !important;
+  padding: 0.35rem 0.9rem !important;
   font-weight: 700 !important;
 }
 
+html[data-theme="dark"] .nav-quiz-highlight,
 html[data-theme="dark"] .nav-quiz-link {
   color: #FBBF24 !important;
-  border-color: rgba(251, 191, 36, 0.45) !important;
+  border-color: rgba(251, 191, 36, 0.48) !important;
 }
 
+.nav-quiz-highlight:hover,
 .nav-quiz-link:hover {
-  background: linear-gradient(135deg, #D97706, #B45309) !important;
+  background: linear-gradient(135deg, #D97706, #9A3412) !important;
   color: #FFFFFF !important;
 }
 
 /* --------------------------------------------------------------------------
-   4. 3D Spotlight & Interactive Tilt Cards
+   5. 3D Spotlight & Interactive Tilt Cards
    -------------------------------------------------------------------------- */
 .tilt-card {
   position: relative;
@@ -206,8 +325,8 @@ html[data-theme="dark"] .nav-quiz-link {
   border-radius: inherit;
   background: radial-gradient(
     500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(217, 119, 6, 0.12),
-    rgba(37, 99, 235, 0.06) 40%,
+    rgba(217, 119, 6, 0.15),
+    rgba(194, 65, 12, 0.07) 40%,
     transparent 80%
   );
   opacity: 0;
@@ -221,11 +340,11 @@ html[data-theme="dark"] .nav-quiz-link {
 }
 
 /* --------------------------------------------------------------------------
-   5. Live Counter Strip (Impact Numbers)
+   6. Live Counter Strip (Impact Numbers)
    -------------------------------------------------------------------------- */
 .impact-stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 1.5rem;
   margin: 2.5rem 0;
 }
@@ -233,9 +352,9 @@ html[data-theme="dark"] .nav-quiz-link {
 .impact-stat-card {
   background: var(--bg-elevated);
   border: 1px solid var(--border-default);
-  border-top: 3px solid #D97706;
+  border-top: 4px solid #D97706;
   border-radius: var(--radius-lg);
-  padding: 1.5rem;
+  padding: 1.6rem 1.4rem;
   text-align: center;
   box-shadow: var(--shadow-sm);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -243,7 +362,7 @@ html[data-theme="dark"] .nav-quiz-link {
 
 .impact-stat-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-lg), var(--shadow-gold);
 }
 
 .impact-stat-number {
@@ -252,37 +371,41 @@ html[data-theme="dark"] .nav-quiz-link {
   font-weight: 700;
   color: var(--accent);
   line-height: 1.1;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.45rem;
 }
 
 .impact-stat-label {
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.92rem;
+  font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.35rem;
 }
 
+.impact-stat-desc,
 .impact-stat-sub {
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   color: var(--text-secondary);
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 /* --------------------------------------------------------------------------
-   6. Colonial Conspiracy Section & Expose Cards
+   7. Colonial Conspiracy Section & Expose Cards
    -------------------------------------------------------------------------- */
+.conspiracy-section,
 .section-conspiracy {
   position: relative;
   padding: var(--space-20) 0;
-  background: linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-surface) 100%);
-  border-top: 1px solid var(--border-default);
-  border-bottom: 1px solid var(--border-default);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(217, 119, 6, 0.12) 0%, transparent 70%),
+    linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-surface) 100%);
+  border-top: 1px solid var(--border-gold);
+  border-bottom: 1px solid var(--border-gold);
   overflow: hidden;
 }
 
 .conspiracy-banner {
-  background: linear-gradient(135deg, rgba(185, 28, 28, 0.08) 0%, rgba(217, 119, 6, 0.1) 50%, rgba(37, 99, 235, 0.08) 100%);
-  border: 1px solid rgba(217, 119, 6, 0.35);
+  background: linear-gradient(135deg, rgba(185, 28, 28, 0.08) 0%, rgba(217, 119, 6, 0.12) 50%, rgba(180, 83, 9, 0.08) 100%);
+  border: 1px solid rgba(217, 119, 6, 0.4);
   border-left: 5px solid #D97706;
   border-radius: var(--radius-lg);
   padding: 2rem;
@@ -323,7 +446,7 @@ html[data-theme="dark"] .nav-quiz-link {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.55rem 1.1rem;
+  padding: 0.55rem 1.15rem;
   background: var(--bg-elevated);
   border: 1px solid var(--border-gold);
   border-radius: 9999px;
@@ -331,12 +454,13 @@ html[data-theme="dark"] .nav-quiz-link {
   font-weight: 600;
   color: var(--text-primary);
   box-shadow: var(--shadow-sm);
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .scripture-pill:hover {
   transform: translateY(-2px);
   border-color: #D97706;
+  box-shadow: var(--shadow-gold);
 }
 
 .scripture-pill span {
@@ -354,6 +478,7 @@ html[data-theme="dark"] .nav-quiz-link {
 .conspiracy-card {
   background: var(--bg-elevated);
   border: 1px solid var(--border-default);
+  border-top: 4px solid #DC2626;
   border-radius: var(--radius-lg);
   padding: 1.75rem;
   box-shadow: var(--shadow-sm);
@@ -367,22 +492,26 @@ html[data-theme="dark"] .nav-quiz-link {
   box-shadow: var(--shadow-lg);
 }
 
+.conspiracy-year-badge,
 .conspiracy-card-tag {
   display: inline-block;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.7rem;
+  padding: 0.28rem 0.8rem;
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   border-radius: 9999px;
-  background: rgba(220, 38, 38, 0.1);
-  color: #DC2626;
+  background: rgba(220, 38, 38, 0.12);
+  color: #B91C1C;
+  border: 1px solid rgba(220, 38, 38, 0.25);
   margin-bottom: 0.85rem;
 }
 
+html[data-theme="dark"] .conspiracy-year-badge,
 html[data-theme="dark"] .conspiracy-card-tag {
   background: rgba(248, 113, 113, 0.16);
   color: #F87171;
+  border-color: rgba(248, 113, 113, 0.3);
 }
 
 .conspiracy-card h3 {
@@ -393,6 +522,7 @@ html[data-theme="dark"] .conspiracy-card-tag {
   line-height: 1.35;
 }
 
+.conspiracy-quote,
 .conspiracy-card blockquote {
   font-style: italic;
   font-size: 0.9rem;
@@ -412,9 +542,10 @@ html[data-theme="dark"] .conspiracy-card-tag {
 }
 
 /* Interactive Distortion vs Original Truth Showcase */
+.distortion-comparison-wrap,
 .distortion-showcase {
   background: var(--bg-elevated);
-  border: 1px solid var(--border-default);
+  border: 1px solid var(--border-gold);
   border-radius: var(--radius-xl);
   padding: 2rem;
   box-shadow: var(--shadow-md);
@@ -437,12 +568,12 @@ html[data-theme="dark"] .conspiracy-card-tag {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.55rem;
   margin-bottom: 1.5rem;
 }
 
 .distortion-tab-btn {
-  padding: 0.55rem 1.1rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 9999px;
   border: 1px solid var(--border-default);
   background: var(--bg-surface);
@@ -459,10 +590,10 @@ html[data-theme="dark"] .conspiracy-card-tag {
 }
 
 .distortion-tab-btn.active {
-  background: var(--accent);
+  background: linear-gradient(135deg, #D97706, #B45309);
   color: #FFFFFF;
-  border-color: var(--accent);
-  box-shadow: 0 3px 12px rgba(37, 99, 235, 0.3);
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(180, 83, 9, 0.35);
 }
 
 .distortion-panel {
@@ -488,40 +619,55 @@ html[data-theme="dark"] .conspiracy-card-tag {
   border: 1px solid var(--border-default);
 }
 
+.distortion-box.false-side,
 .distortion-box--lie {
-  background: rgba(220, 38, 38, 0.05);
+  background: rgba(220, 38, 38, 0.06);
   border-left: 4px solid #DC2626;
 }
 
+.distortion-box.true-side,
 .distortion-box--truth {
-  background: rgba(22, 163, 74, 0.06);
+  background: rgba(22, 163, 74, 0.07);
   border-left: 4px solid #16A34A;
 }
 
+.side-badge,
 .distortion-box-badge {
   display: inline-block;
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin-bottom: 0.6rem;
-  padding: 0.2rem 0.6rem;
+  margin-bottom: 0.65rem;
+  padding: 0.25rem 0.65rem;
   border-radius: 4px;
 }
 
+.distortion-box.false-side .side-badge,
 .distortion-box--lie .distortion-box-badge {
   background: rgba(220, 38, 38, 0.14);
-  color: #DC2626;
+  color: #B91C1C;
 }
 
+html[data-theme="dark"] .distortion-box.false-side .side-badge,
+html[data-theme="dark"] .distortion-box--lie .distortion-box-badge {
+  color: #F87171;
+}
+
+.distortion-box.true-side .side-badge,
 .distortion-box--truth .distortion-box-badge {
-  background: rgba(22, 163, 74, 0.15);
-  color: #16A34A;
+  background: rgba(22, 163, 74, 0.16);
+  color: #15803D;
+}
+
+html[data-theme="dark"] .distortion-box.true-side .side-badge,
+html[data-theme="dark"] .distortion-box--truth .distortion-box-badge {
+  color: #4ADE80;
 }
 
 .distortion-box h4 {
   font-family: var(--font-heading);
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   color: var(--text-primary);
   margin-bottom: 0.6rem;
 }
@@ -533,11 +679,15 @@ html[data-theme="dark"] .conspiracy-card-tag {
 }
 
 /* --------------------------------------------------------------------------
-   7. Interactive Quiz System Styles (Homepage, Article Pages & quiz.html)
+   8. Interactive Quiz System Styles (Homepage, Article Pages & quiz.html)
    -------------------------------------------------------------------------- */
+.quiz-section-wrapper,
 .section-quiz-home {
   padding: var(--space-20) 0;
-  background: linear-gradient(180deg, var(--bg-deepest) 0%, var(--bg-deep) 100%);
+  background:
+    radial-gradient(ellipse at 50% 10%, rgba(217, 119, 6, 0.1) 0%, transparent 70%),
+    linear-gradient(180deg, var(--bg-deepest) 0%, var(--bg-deep) 100%);
+  border-top: 1px solid var(--border-gold);
   position: relative;
 }
 
@@ -556,7 +706,7 @@ html[data-theme="dark"] .conspiracy-card-tag {
 }
 
 .quiz-cat-btn {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.05rem;
   border-radius: 9999px;
   font-size: 0.82rem;
   font-weight: 600;
@@ -573,10 +723,10 @@ html[data-theme="dark"] .conspiracy-card-tag {
 }
 
 .quiz-cat-btn.active {
-  background: linear-gradient(135deg, var(--accent), var(--accent-dim));
+  background: linear-gradient(135deg, #D97706, #B45309);
   color: #FFFFFF;
   border-color: transparent;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 4px 12px rgba(180, 83, 9, 0.3);
 }
 
 /* Quiz Status / Score Header */
@@ -587,7 +737,7 @@ html[data-theme="dark"] .conspiracy-card-tag {
   justify-content: space-between;
   gap: 1rem;
   background: var(--bg-elevated);
-  border: 1px solid var(--border-default);
+  border: 1px solid var(--border-gold);
   border-radius: var(--radius-lg);
   padding: 1rem 1.5rem;
   margin-bottom: 1.5rem;
@@ -618,7 +768,7 @@ html[data-theme="dark"] .conspiracy-card-tag {
 
 .quiz-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #2563EB, #D97706);
+  background: linear-gradient(90deg, #B45309, #D97706, #EA580C);
   border-radius: 9999px;
   transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -643,21 +793,21 @@ html[data-theme="dark"] .conspiracy-card-tag {
 }
 
 .quiz-stat-pill--correct {
-  color: #16A34A;
-  background: rgba(22, 163, 74, 0.1);
-  border-color: rgba(22, 163, 74, 0.25);
+  color: #15803D;
+  background: rgba(22, 163, 74, 0.12);
+  border-color: rgba(22, 163, 74, 0.3);
 }
 
 .quiz-stat-pill--wrong {
-  color: #DC2626;
-  background: rgba(220, 38, 38, 0.08);
-  border-color: rgba(220, 38, 38, 0.25);
+  color: #B91C1C;
+  background: rgba(220, 38, 38, 0.1);
+  border-color: rgba(220, 38, 38, 0.3);
 }
 
 /* Main Question Card */
 .quiz-card {
   background: var(--bg-elevated);
-  border: 1px solid var(--border-default);
+  border: 1px solid var(--border-gold);
   border-top: 4px solid #D97706;
   border-radius: var(--radius-xl);
   padding: 2rem;
@@ -807,7 +957,7 @@ html[data-theme="dark"] .quiz-badge {
 
 .quiz-option-btn:disabled {
   cursor: default;
-  opacity: 0.92;
+  opacity: 0.94;
 }
 
 /* Feedback Banner & Optional Explanation Toggle */
@@ -846,7 +996,7 @@ html[data-theme="dark"] .quiz-badge {
 }
 
 .quiz-result-banner--wrong .quiz-result-title {
-  color: #DC2626;
+  color: #B91C1C;
 }
 
 html[data-theme="dark"] .quiz-result-banner--wrong .quiz-result-title {
@@ -854,7 +1004,7 @@ html[data-theme="dark"] .quiz-result-banner--wrong .quiz-result-title {
 }
 
 .quiz-result-banner--correct .quiz-result-title {
-  color: #16A34A;
+  color: #15803D;
 }
 
 html[data-theme="dark"] .quiz-result-banner--correct .quiz-result-title {
@@ -884,7 +1034,7 @@ html[data-theme="dark"] .quiz-result-banner--correct .quiz-result-title {
 /* Detailed Explanation Box */
 .quiz-explanation-box {
   background: var(--bg-surface);
-  border: 1px solid var(--border-default);
+  border: 1px solid var(--border-gold);
   border-left: 4px solid var(--accent);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
@@ -929,7 +1079,11 @@ html[data-theme="dark"] .quiz-result-banner--correct .quiz-result-title {
 }
 
 .quiz-exp-label--proof {
-  color: #16A34A;
+  color: #15803D;
+}
+
+html[data-theme="dark"] .quiz-exp-label--proof {
+  color: #4ADE80;
 }
 
 .quiz-exp-section p {
@@ -982,13 +1136,13 @@ html[data-theme="dark"] .quiz-result-banner--correct .quiz-result-title {
 .quiz-dot.is-answered-correct {
   background: rgba(22, 163, 74, 0.18);
   border-color: #16A34A;
-  color: #16A34A;
+  color: #15803D;
 }
 
 .quiz-dot.is-answered-wrong {
   background: rgba(220, 38, 38, 0.15);
   border-color: #DC2626;
-  color: #DC2626;
+  color: #B91C1C;
 }
 
 /* Summary / Completion Card */
@@ -1011,7 +1165,7 @@ html[data-theme="dark"] .quiz-result-banner--correct .quiz-result-title {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(217, 119, 6, 0.16));
+  background: linear-gradient(135deg, rgba(217, 119, 6, 0.16), rgba(194, 65, 12, 0.14));
   border: 4px solid #D97706;
   font-family: var(--font-heading);
 }
@@ -1028,15 +1182,17 @@ html[data-theme="dark"] .quiz-result-banner--correct .quiz-result-title {
   color: var(--text-secondary);
 }
 
-/* Mission Callout Box on Investigation Pages */
+/* --------------------------------------------------------------------------
+   9. Mission Callout Box & Truth Columns on Investigation Pages
+   -------------------------------------------------------------------------- */
 .mission-truth-banner {
-  background: linear-gradient(135deg, rgba(217, 119, 6, 0.09) 0%, rgba(37, 99, 235, 0.09) 100%);
-  border: 1px solid rgba(217, 119, 6, 0.4);
+  background: linear-gradient(135deg, rgba(217, 119, 6, 0.1) 0%, rgba(194, 65, 12, 0.08) 100%);
+  border: 1px solid rgba(217, 119, 6, 0.45);
   border-left: 5px solid #D97706;
   border-radius: var(--radius-lg);
-  padding: 1.5rem 1.75rem;
-  margin: 1.75rem 0 2.25rem;
-  box-shadow: var(--shadow-sm);
+  padding: 1.75rem 2rem;
+  margin: 1.75rem 0 2.5rem;
+  box-shadow: var(--shadow-md);
 }
 
 .mission-truth-banner-badge {
@@ -1045,11 +1201,11 @@ html[data-theme="dark"] .quiz-result-banner--correct .quiz-result-title {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #B45309;
-  background: rgba(217, 119, 6, 0.15);
-  padding: 0.2rem 0.65rem;
+  color: #9A3412;
+  background: rgba(217, 119, 6, 0.18);
+  padding: 0.25rem 0.75rem;
   border-radius: 9999px;
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.75rem;
 }
 
 html[data-theme="dark"] .mission-truth-banner-badge {
@@ -1059,19 +1215,77 @@ html[data-theme="dark"] .mission-truth-banner-badge {
 
 .mission-truth-banner h3 {
   font-family: var(--font-heading);
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   color: var(--text-primary);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.85rem;
 }
 
 .mission-truth-banner p {
   font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.7;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 }
 
 .mission-truth-banner p:last-child {
   margin-bottom: 0;
 }
 
+.truth-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .truth-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.truth-col {
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+}
+
+.truth-col.false-claim {
+  border-left: 4px solid #DC2626;
+  background: rgba(220, 38, 38, 0.05);
+}
+
+.truth-col.real-truth {
+  border-left: 4px solid #16A34A;
+  background: rgba(22, 163, 74, 0.06);
+}
+
+.truth-col-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+}
+
+.truth-col.false-claim .truth-col-label {
+  background: rgba(220, 38, 38, 0.14);
+  color: #B91C1C;
+}
+
+html[data-theme="dark"] .truth-col.false-claim .truth-col-label {
+  color: #F87171;
+}
+
+.truth-col.real-truth .truth-col-label {
+  background: rgba(22, 163, 74, 0.16);
+  color: #15803D;
+}
+
+html[data-theme="dark"] .truth-col.real-truth .truth-col-label {
+  color: #4ADE80;
+}

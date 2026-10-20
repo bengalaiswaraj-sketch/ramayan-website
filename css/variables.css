@@ -1,91 +1,98 @@
 /* ==========================================================================
-   variables.css — Design Tokens & Custom Properties
-   Ramayana: Beyond What We Were Told
+   variables.css — Sacred Royal Heritage Design Tokens & Custom Properties
+   Ramayana: Exposing Colonial Distortions & Restoring the Original Truth
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
    Google Fonts Import
    -------------------------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap');
 
 /* --------------------------------------------------------------------------
-   Light Theme (Default) — White & Blue
+   Light Theme (Default) — Sacred Royal Parchment, Temple Gold & Bhagwa Saffron
    -------------------------------------------------------------------------- */
 :root {
-  /* Background layers */
-  --bg-deepest: #FFFFFF;
-  --bg-deep: #F8FAFC;
-  --bg-surface: #F1F5F9;
-  --bg-elevated: #FFFFFF;
-  --bg-hover: #E2E8F0;
+  /* Background layers — Warm Sacred Ivory & Ancient Palm-Leaf Parchment */
+  --bg-deepest: #FCF9F2;
+  --bg-deep: #F4EFE4;
+  --bg-surface: #EBE3D2;
+  --bg-elevated: #FFFDF9;
+  --bg-hover: #E5DBC5;
 
-  /* Text colors */
-  --text-primary: #1E293B;
-  --text-secondary: #475569;
-  --text-tertiary: #94A3B8;
-  --text-inverse: #FFFFFF;
+  /* Text colors — Deep Temple Ink & Warm Charcoal */
+  --text-primary: #1C1613;
+  --text-secondary: #4A3E35;
+  --text-tertiary: #7C6D60;
+  --text-inverse: #FFFDF9;
 
-  /* Accent colors — blue family */
-  --accent: #2563EB;
-  --accent-light: #3B82F6;
-  --accent-dim: #1D4ED8;
-  --accent-glow: rgba(37, 99, 235, 0.12);
-  --accent-warm: #1E40AF;
-  --accent-warm-light: #2563EB;
-  --maroon: #DC2626;
-  --maroon-deep: #B91C1C;
-  --parchment: #1E293B;
+  /* Compatibility aliases */
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-surface: var(--bg-surface);
 
-  /* Legacy aliases for gold → accent (used by components) */
-  --gold: #2563EB;
-  --gold-light: #3B82F6;
-  --gold-dim: #1D4ED8;
-  --gold-glow: rgba(37, 99, 235, 0.12);
-  --saffron: #1E40AF;
-  --saffron-light: #2563EB;
+  /* Accent colors — Sacred Bhagwa Saffron, Royal Gold & Vermilion */
+  --accent: #B45309;
+  --accent-light: #D97706;
+  --accent-dim: #92400E;
+  --accent-glow: rgba(217, 119, 6, 0.16);
+  --accent-warm: #9A3412;
+  --accent-warm-light: #EA580C;
+  --maroon: #991B1B;
+  --maroon-deep: #7F1D1D;
+  --parchment: #1C1613;
+
+  /* Royal Gold & Saffron tokens */
+  --gold: #C27803;
+  --gold-light: #E3A008;
+  --gold-dim: #8E4B10;
+  --gold-glow: rgba(217, 119, 6, 0.18);
+  --saffron: #C2410C;
+  --saffron-light: #EA580C;
 
   /* Confidence badge colors */
-  --badge-attested: #16A34A;
-  --badge-attested-bg: rgba(22, 163, 74, 0.10);
-  --badge-tradition: #2563EB;
-  --badge-tradition-bg: rgba(37, 99, 235, 0.10);
-  --badge-interpretation: #7C3AED;
-  --badge-interpretation-bg: rgba(124, 58, 237, 0.10);
-  --badge-debated: #DC2626;
-  --badge-debated-bg: rgba(220, 38, 38, 0.08);
+  --badge-attested: #15803D;
+  --badge-attested-bg: rgba(21, 128, 61, 0.12);
+  --badge-tradition: #B45309;
+  --badge-tradition-bg: rgba(180, 83, 9, 0.12);
+  --badge-interpretation: #6D28D9;
+  --badge-interpretation-bg: rgba(109, 40, 217, 0.10);
+  --badge-debated: #B91C1C;
+  --badge-debated-bg: rgba(185, 28, 28, 0.10);
 
   /* Source badge colors */
-  --source-primary: #2563EB;
-  --source-primary-bg: rgba(37, 99, 235, 0.08);
-  --source-critical: #16A34A;
-  --source-critical-bg: rgba(22, 163, 74, 0.08);
-  --source-academic: #7C3AED;
-  --source-academic-bg: rgba(124, 58, 237, 0.08);
-  --source-commentary: #D97706;
-  --source-commentary-bg: rgba(217, 119, 6, 0.08);
+  --source-primary: #B45309;
+  --source-primary-bg: rgba(180, 83, 9, 0.10);
+  --source-critical: #15803D;
+  --source-critical-bg: rgba(21, 128, 61, 0.10);
+  --source-academic: #6D28D9;
+  --source-academic-bg: rgba(109, 40, 217, 0.10);
+  --source-commentary: #C2410C;
+  --source-commentary-bg: rgba(194, 65, 12, 0.10);
 
   /* Borders */
-  --border-subtle: rgba(30, 41, 59, 0.06);
-  --border-default: rgba(30, 41, 59, 0.12);
-  --border-strong: rgba(30, 41, 59, 0.20);
-  --border-gold: rgba(37, 99, 235, 0.30);
+  --border-subtle: rgba(146, 64, 14, 0.10);
+  --border-default: rgba(146, 64, 14, 0.18);
+  --border-strong: rgba(146, 64, 14, 0.30);
+  --border-gold: rgba(217, 119, 6, 0.42);
 
   /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(30, 41, 59, 0.06);
-  --shadow-md: 0 4px 12px rgba(30, 41, 59, 0.08);
-  --shadow-lg: 0 8px 32px rgba(30, 41, 59, 0.10);
-  --shadow-gold: 0 4px 20px rgba(37, 99, 235, 0.10);
+  --shadow-sm: 0 2px 6px rgba(28, 22, 19, 0.06);
+  --shadow-md: 0 6px 20px rgba(28, 22, 19, 0.09);
+  --shadow-lg: 0 14px 40px rgba(28, 22, 19, 0.13);
+  --shadow-gold: 0 6px 26px rgba(217, 119, 6, 0.22);
 
   /* Overlay */
-  --overlay: rgba(255, 255, 255, 0.92);
+  --overlay: rgba(252, 249, 242, 0.92);
 
   /* Scrollbar */
-  --scrollbar-track: #F1F5F9;
-  --scrollbar-thumb: #94A3B8;
+  --scrollbar-track: #F4EFE4;
+  --scrollbar-thumb: #C27803;
 
   /* Selection */
-  --selection-bg: rgba(37, 99, 235, 0.20);
-  --selection-text: #1E293B;
+  --selection-bg: rgba(217, 119, 6, 0.24);
+  --selection-text: #1C1613;
 
   /* --------------------------------------------------------------------------
      Typography
@@ -147,18 +154,18 @@
   /* --------------------------------------------------------------------------
      Layout
      -------------------------------------------------------------------------- */
-  --content-max-width: 780px;
-  --site-max-width: 1200px;
-  --header-height: 64px;
+  --content-max-width: 820px;
+  --site-max-width: 1240px;
+  --header-height: 70px;
   --sidebar-width: 280px;
 
   /* --------------------------------------------------------------------------
      Border Radius
      -------------------------------------------------------------------------- */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
   --radius-full: 9999px;
 
   /* --------------------------------------------------------------------------
@@ -201,57 +208,57 @@
 }
 
 /* --------------------------------------------------------------------------
-   Dark / Night Mode
+   Dark / Night Mode — Cosmic Midnight Temple & Molten Gold
    -------------------------------------------------------------------------- */
 html[data-theme="dark"] {
-  --bg-deepest: #0F172A;
-  --bg-deep: #1E293B;
-  --bg-surface: #1E293B;
-  --bg-elevated: #334155;
-  --bg-hover: #334155;
+  --bg-deepest: #080B12;
+  --bg-deep: #0F1422;
+  --bg-surface: #161E31;
+  --bg-elevated: #1B253B;
+  --bg-hover: #25324F;
 
-  --text-primary: #F1F5F9;
-  --text-secondary: #CBD5E1;
-  --text-tertiary: #94A3B8;
-  --text-inverse: #0F172A;
+  --text-primary: #F8F5EE;
+  --text-secondary: #D6CFC2;
+  --text-tertiary: #9E9484;
+  --text-inverse: #080B12;
 
-  --accent: #60A5FA;
-  --accent-light: #93C5FD;
-  --accent-dim: #3B82F6;
-  --accent-glow: rgba(96, 165, 250, 0.20);
+  --accent: #F59E0B;
+  --accent-light: #FBBF24;
+  --accent-dim: #D97706;
+  --accent-glow: rgba(245, 158, 11, 0.22);
 
-  --gold: #60A5FA;
-  --gold-light: #93C5FD;
-  --gold-dim: #3B82F6;
-  --gold-glow: rgba(96, 165, 250, 0.20);
-  --saffron: #3B82F6;
-  --saffron-light: #60A5FA;
+  --gold: #FBBF24;
+  --gold-light: #FDE68A;
+  --gold-dim: #D97706;
+  --gold-glow: rgba(251, 191, 36, 0.22);
+  --saffron: #FB923C;
+  --saffron-light: #FDBA74;
 
-  --border-subtle: rgba(241, 245, 249, 0.06);
-  --border-default: rgba(241, 245, 249, 0.12);
-  --border-strong: rgba(241, 245, 249, 0.20);
-  --border-gold: rgba(96, 165, 250, 0.40);
+  --border-subtle: rgba(251, 191, 36, 0.08);
+  --border-default: rgba(251, 191, 36, 0.16);
+  --border-strong: rgba(251, 191, 36, 0.28);
+  --border-gold: rgba(251, 191, 36, 0.45);
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
-  --shadow-gold: 0 4px 20px rgba(96, 165, 250, 0.15);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.65);
+  --shadow-gold: 0 6px 28px rgba(245, 158, 11, 0.25);
 
-  --overlay: rgba(15, 23, 42, 0.85);
+  --overlay: rgba(8, 11, 18, 0.88);
 
-  --scrollbar-track: #1E293B;
-  --scrollbar-thumb: #475569;
+  --scrollbar-track: #0F1422;
+  --scrollbar-thumb: #D97706;
 
-  --selection-bg: rgba(96, 165, 250, 0.30);
-  --selection-text: #F1F5F9;
+  --selection-bg: rgba(245, 158, 11, 0.30);
+  --selection-text: #F8F5EE;
 
-  --badge-attested-bg: rgba(22, 163, 74, 0.15);
-  --badge-tradition-bg: rgba(96, 165, 250, 0.15);
-  --badge-interpretation-bg: rgba(124, 58, 237, 0.15);
-  --badge-debated-bg: rgba(220, 38, 38, 0.12);
+  --badge-attested-bg: rgba(22, 163, 74, 0.18);
+  --badge-tradition-bg: rgba(245, 158, 11, 0.18);
+  --badge-interpretation-bg: rgba(139, 92, 246, 0.18);
+  --badge-debated-bg: rgba(239, 68, 68, 0.16);
 
-  --source-primary-bg: rgba(96, 165, 250, 0.12);
-  --source-critical-bg: rgba(22, 163, 74, 0.12);
-  --source-academic-bg: rgba(124, 58, 237, 0.12);
-  --source-commentary-bg: rgba(217, 119, 6, 0.12);
+  --source-primary-bg: rgba(245, 158, 11, 0.15);
+  --source-critical-bg: rgba(22, 163, 74, 0.15);
+  --source-academic-bg: rgba(139, 92, 246, 0.15);
+  --source-commentary-bg: rgba(249, 115, 22, 0.15);
 }
